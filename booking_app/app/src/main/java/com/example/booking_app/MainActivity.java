@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 
 		// TODO: 01-12-2020 switch to bookiing category
-		startActivity(new Intent(MainActivity.this , CategoryActivity.class));
-		finish();
+		/*startActivity(new Intent(MainActivity.this , CategoryActivity.class));
+		finish();*/
 	}
 }
