@@ -12,7 +12,7 @@
 		android:layout_height="match_parent">
 
 	<EditText
-		android:id="@+id/editTextTextPersonName"
+		android:id="@+id/UserNameED"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:hint="Username"
@@ -22,10 +22,8 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/textView2"
-		app:layout_constraintBottom_toTopOf="@id/editTextTextPersonName2"
+		app:layout_constraintBottom_toTopOf="@id/EmailED"
 		android:background="@mipmap/name_edittext"
-		android:layout_marginLeft="30dp"
-		android:layout_marginRight="30dp"
 		android:layout_marginTop="40dp"/>
 
 	<TextView
@@ -57,20 +55,18 @@
 		app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 	<EditText
-		android:id="@+id/editTextTextPersonName2"
+		android:id="@+id/PassWordED"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:hint="Password"
 		android:paddingLeft="100dp"
 		android:paddingRight="30dp"
-		android:inputType="textPersonName"
+		android:inputType="textPassword"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+		app:layout_constraintTop_toBottomOf="@+id/UserNameED"
 		app:layout_constraintBottom_toTopOf="@id/textView3"
-		android:background="@mipmap/password_edittext"
-		android:layout_marginLeft="30dp"
-		android:layout_marginRight="30dp"/>
+		android:background="@mipmap/password_edittext"/>
 
 	<TextView
 		android:id="@+id/textView3"
@@ -84,10 +80,10 @@
 		android:text="forget Password??"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+		app:layout_constraintTop_toBottomOf="@+id/PassWordED" />
 
 	<Button
-		android:id="@+id/button"
+		android:id="@+id/LoginBtn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="43dp"
@@ -112,7 +108,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button" />
+		app:layout_constraintTop_toBottomOf="@+id/LoginBtn" />
 
 
 		<LinearLayout
@@ -126,7 +122,7 @@
 			android:layout_marginTop="40dp">
 
 	<Button
-		android:id="@+id/button2"
+		android:id="@+id/GoogleLoginBtn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="39dp"
@@ -134,7 +130,7 @@
 		android:background="@mipmap/googlebtn"/>
 
 	<Button
-		android:id="@+id/button3"
+		android:id="@+id/TwitterLoginBtn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="34dp"
@@ -142,7 +138,7 @@
 		android:background="@mipmap/twitterbtn"/>
 
 	<Button
-		android:id="@+id/button4"
+		android:id="@+id/FBLoginBtn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="34dp"
@@ -162,18 +158,21 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"/>
 
+		<!--Move to Sign Up Page -->
 		<TextView
-			android:id="@+id/textView6"
+			android:id="@+id/MoveToSIgnUp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			app:layout_constraintLeft_toRightOf="@id/textView5"
 			app:layout_constraintTop_toBottomOf="@id/linearLayout"
 			android:gravity="center"
-			android:text="Sign In"
+			android:text="Sign Up"
 			android:textSize="15dp"
 			android:layout_marginTop="20dp"
 			android:textColor="#0981EF"
-			android:textStyle="bold"/>
+			android:textStyle="bold"
+			android:clickable="true"
+			android:focusable="true"/>
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 

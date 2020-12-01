@@ -19,4 +19,30 @@
         android:transitionName="cardTransition"
         android:background="@mipmap/titlebar"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategoryTitle"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15sp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/date_name_bg"
+            android:text="Date"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/date_name_bg"
+            android:layout_marginLeft="10dp"
+            android:text="Button"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
