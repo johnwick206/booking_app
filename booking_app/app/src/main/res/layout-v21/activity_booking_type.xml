@@ -20,29 +20,92 @@
         android:background="@mipmap/titlebar"/>
 
     <LinearLayout
+        android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/CategoryTitle"
         android:layout_marginTop="20sp"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="15sp"
-        >
+        android:layout_marginHorizontal="15sp">
 
         <Button
+            android:id="@+id/DateSetBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:background="@drawable/date_name_bg"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:layout_gravity="center"
             android:text="Date"/>
 
         <Button
+            android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/date_name_bg"
             android:layout_marginLeft="10dp"
-            android:text="Button"/>
-
+            android:text="Name"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/LinearLayout"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="cardTransition2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="M-101"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/card1"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="cardTransition2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="M-102"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

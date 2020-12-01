@@ -19,8 +19,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.booking_app.FormActivity" />
         <activity android:name="com.example.booking_app.BookingTypeActivity" />
         <activity android:name="com.example.booking_app.CategoryActivity" />
+        <activity android:name="com.example.booking_app.SignUp" />
         <activity android:name="com.example.booking_app.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
