@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+    <View
+        android:id="@+id/classroomCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:background="@mipmap/clsroomcard"
+        android:transitionName="cardTransition"/>
+
+    <View
+        android:id="@+id/LabCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/classroomCard"
+        android:layout_margin="15dp"
+        android:background="@mipmap/labcard"
+        android:transitionName="cardTransition"/>
+
+    <View
+        android:id="@+id/SeminarCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/LabCard"
+        android:layout_margin="15dp"
+        android:background="@mipmap/seminarcard"
+        android:transitionName="cardTransition"/>
+
+</RelativeLayout>
