@@ -9,6 +9,7 @@ android {
         applicationId "com.example.booking_app"
         minSdkVersion 16
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
@@ -38,4 +39,7 @@ dependencies {
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.android.support:multidex:1.0.3'
 }

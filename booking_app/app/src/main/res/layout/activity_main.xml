@@ -12,13 +12,13 @@
 		android:layout_height="match_parent">
 
 	<EditText
-		android:id="@+id/UserNameED"
+		android:id="@+id/emailED"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:hint="Username"
 		android:paddingLeft="100dp"
 		android:paddingRight="30dp"
-		android:inputType="textPersonName"
+		android:inputType="textEmailAddress"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -64,7 +64,7 @@
 		android:inputType="textPassword"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/UserNameED"
+		app:layout_constraintTop_toBottomOf="@+id/emailED"
 		app:layout_constraintBottom_toTopOf="@id/textView3"
 		android:background="@mipmap/password_edittext"/>
 
