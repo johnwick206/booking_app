@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	}
 
 	private void googleLogin() {
+		startActivity(new Intent(MainActivity.this , AdminMain.class));
 	}
 
 	private void twitterLogin() {

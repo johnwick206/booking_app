@@ -1003,6 +1003,12 @@ id easeInOut
 id easeOut
 id edit_query
 id end
+id event1
+id event2
+id event3
+id event4
+id event5
+id event6
 id expand_activities_button
 id expanded_menu
 id fill
@@ -1092,6 +1098,7 @@ id showHome
 id showTitle
 id sin
 id spacer
+id splReqTitle
 id splRequirement
 id spline
 id split_action_bar
@@ -1190,6 +1197,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_admin_event_details
+layout activity_admin_main
 layout activity_booking_type
 layout activity_category
 layout activity_form
@@ -1206,6 +1215,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+mipmap bg_2
 mipmap card
 mipmap clsroomcard
 mipmap email_edittext

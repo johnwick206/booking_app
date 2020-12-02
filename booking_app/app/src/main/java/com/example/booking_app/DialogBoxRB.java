@@ -11,6 +11,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class DialogBoxRB extends DialogFragment {
     private static onClickBlocks blockInterfaceRef;
+   private int ref = 0;
 
     @NonNull
     @Override

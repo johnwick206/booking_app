@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMain"
+    android:background="@mipmap/bg_2">
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome\nAdmin!!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
+
+  <RelativeLayout
+      android:id="@+id/event1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@mipmap/titlebar"
+      android:layout_below="@id/pageTitle"
+      android:gravity="center"
+      android:layout_marginTop="10dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:transitionName="adminCardT">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="Seminar - 1"/>
+
+  </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event1"
+        android:background="@mipmap/titlebar"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="adminCardT">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seminar - 2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event2"
+        android:background="@mipmap/titlebar"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="adminCardT">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seminar - 3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event3"
+        android:background="@mipmap/titlebar"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="adminCardT">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seminar - 4"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event4"
+        android:background="@mipmap/titlebar"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="adminCardT">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seminar - 5"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event5"
+        android:background="@mipmap/titlebar"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:transitionName="adminCardT">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seminar - 6"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
