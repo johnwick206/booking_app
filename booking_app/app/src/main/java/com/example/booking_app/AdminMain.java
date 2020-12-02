@@ -36,7 +36,7 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
 
     private void openDetails(String name) {
         Intent intent = new Intent(AdminMain.this ,AdminEventDetails.class);
-        intent.putExtra("EventName",name);
+        intent.putExtra("Name",name);
         startActivity(intent);
     }
 }

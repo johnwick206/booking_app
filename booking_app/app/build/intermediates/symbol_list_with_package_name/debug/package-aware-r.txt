@@ -880,6 +880,7 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id SeminarCard
+id SeminarName
 id SignUpBtn
 id TwitterLoginBtn
 id UserNameED
@@ -936,6 +937,11 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id actualcategory
+id actualcontact
+id actualdate
+id actualroomno
+id actualslot
 id add
 id alertTitle
 id aligned
@@ -961,6 +967,7 @@ id buttonPanel
 id cache_measures
 id card1
 id card2
+id category
 id center
 id center_horizontal
 id center_vertical
@@ -973,11 +980,13 @@ id classroomCard
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id contact
 id content
 id contentPanel
 id cos
 id custom
 id customPanel
+id date
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -1049,6 +1058,7 @@ id message
 id middle
 id motion_base
 id multiply
+id name
 id never
 id none
 id normal
@@ -1057,8 +1067,10 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id organizer
 id organizingBody
 id packed
+id pageTitle
 id parent
 id parentPanel
 id parentRelative
@@ -1076,6 +1088,7 @@ id reverseSawtooth
 id right
 id right_icon
 id right_side
+id roomno
 id sawtooth
 id screen
 id scrollIndicatorDown
@@ -1097,6 +1110,7 @@ id showCustom
 id showHome
 id showTitle
 id sin
+id slot
 id spacer
 id splReqTitle
 id splRequirement
@@ -1217,6 +1231,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap bg_2
 mipmap card
+mipmap card_block
 mipmap clsroomcard
 mipmap email_edittext
 mipmap fb_btn

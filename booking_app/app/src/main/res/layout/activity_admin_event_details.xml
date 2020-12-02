@@ -1,10 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminEventDetails">
 
+    <RelativeLayout
+        android:id="@+id/SeminarName"
+        android:layout_width="370dp"
+        android:layout_height="66dp"
+        android:layout_margin="20dp"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hall Booking Seminar"
+            android:textAlignment="center"
+            android:textColor="#05786E"
+            android:textSize="27sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/organizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:background="@mipmap/titlebar"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Organizer"
+            android:gravity="center"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="20sp"
+        android:background="@mipmap/card"
+        android:gravity="center"
+        android:layout_below="@id/organizer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Category"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Seminar Hall"
+            android:textSize="22sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category"
+        android:layout_marginTop="20dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="149dp"
+        android:background="@mipmap/card_block"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/roomno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Room No."
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualroomno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="M-101"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="149dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="@mipmap/card_block">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Date"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:text="02-12-2020"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/slot"
+        android:layout_width="361dp"
+        android:layout_height="108dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20sp"
+        android:background="@mipmap/card"
+        android:gravity="center"
+        android:layout_below="@id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Slot"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/actualslot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:text="9am-12pm"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/card"
+        android:gravity="center"
+        android:layout_below="@id/slot">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Contact"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="example@gmail.com"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
