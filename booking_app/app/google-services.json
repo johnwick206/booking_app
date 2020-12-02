@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "379985237409",
+    "firebase_url": "https://vit-booking.firebaseio.com",
+    "project_id": "vit-booking",
+    "storage_bucket": "vit-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379985237409:android:2e6c741cfe73406f8127e0",
+        "android_client_info": {
+          "package_name": "com.example.booking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379985237409-2afmhdd7d1pkmsupjcj99pnnf04j4cti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.booking_app",
+            "certificate_hash": "f9e97b66a61893c02fe4eb76bc27d94b7157fccf"
+          }
+        },
+        {
+          "client_id": "379985237409-uulqvvbc0j3bmmlecdhv6en0538k8pfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBySjguj_zHU5v409mow_DNfgw5g37STlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379985237409-uulqvvbc0j3bmmlecdhv6en0538k8pfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
