@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Booking_app</string>
     <string-array name="Blocks">
-        <item>M-Block</item>
+        <item>A-Block</item>
+        <item>B-Block</item>
+        <item>C-Block</item>
         <item>D-Block</item>
+        <item>E-Block</item>
         <item>F-Block</item>
+        <item>M-Block</item>
     </string-array>
 </resources>

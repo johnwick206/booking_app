@@ -14,7 +14,30 @@
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/date_name_bg"
-        android:paddingVertical="80dp">
+        android:paddingVertical="30dp">
+
+        <TextView
+            android:id="@+id/CategoryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category Name"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:id="@+id/CategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_round_bg"
+            android:layout_below="@id/CategoryHeader"
+            android:gravity="center"
+            android:text="Category"
+            android:paddingHorizontal="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/BlockHeader"
@@ -22,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="Block Name"
             android:layout_marginTop="20sp"
-            android:layout_marginLeft="25dp"/>
+            android:layout_marginLeft="25dp"
+            android:layout_below="@id/CategoryName"/>
 
         <EditText
             android:id="@+id/BlockName"

@@ -1717,6 +1717,8 @@ id BOTTOM_START
 id BlockHeader
 id BlockName
 id CTRL
+id CategoryHeader
+id CategoryName
 id CategoryTitle
 id DateSetBtn
 id EmailED

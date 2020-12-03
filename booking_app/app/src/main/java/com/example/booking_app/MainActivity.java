@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		finish();
 	}
 
+	//Password Reset
 	private void forgetPass(){
 		final EditText resetMail=new EditText(this);
 		AlertDialog.Builder passwordResetDialogue = new AlertDialog.Builder(this);
