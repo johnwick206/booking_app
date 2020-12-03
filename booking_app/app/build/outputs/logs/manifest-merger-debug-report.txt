@@ -7,6 +7,7 @@ INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booki
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\61d2cfe405903f3397fb19077fa68435\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5b0495aabbcdd441e28ae0f206325f4f\jetified-facebook-login-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\1cc87f1d87c91fac481e928242f8a0fd\jetified-facebook-share-5.15.3\AndroidManifest.xml:21:1-31:12
@@ -19,6 +20,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pratik\.gradle\ca
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\68ae3f6060a9f0f985f65ff521fe2304\browser-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\ed634e806a076badd907ecf770cbaa68\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\516fe5ba6e7a5904110f03fcfac34d32\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e8b0310bcdb65e4a1dc4f08da1c1ae24\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\d16127dc554a37d27c8f0f3704db4fe3\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\37583440522da5eea6ca9cc5c024ba8b\jetified-play-services-auth-19.0.0\AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4cbbbb012ecc5cc6308b8fd9726ca771\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
@@ -54,9 +56,10 @@ MERGED from [com.facebook.android:facebook-messenger:5.15.3] C:\Users\Pratik\.gr
 MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c9ec81b904b9ef43b236923d651ce969\jetified-facebook-core-5.15.3\AndroidManifest.xml:21:1-53:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\03b324c1985b8c58d53e2db13ae4fc21\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\88e8c17d9d9a93d4f7d0bad296ed0634\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\caebeefe6e6845710b0fb5a0bef7ea2e\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\fe3daf4af58530a50985099ec0c78ecd\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\7b95f164d9500f3002198691283ee900\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\063d51b4c0d2d4546a8c7bae6522f028\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5bc5e942bd1b737d9363303f121ae1c9\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\f629487dd05f12a34aa75d92c0c40c0a\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -75,6 +78,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Pratik\.
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\883ce632c8b91c69b7e7bbb9043163c8\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\7e0ba80650a4da13ab16703eca4baf29\jetified-protolite-well-known-types-17.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\291a7c3c493b1334674114fca4d550c0\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\df12ae8f0adf231449e64e92aadc36a0\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\47241a6f5d229c05852e9110e3ed3216\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
 INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-30:12
 INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-30:12
@@ -117,6 +121,8 @@ MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gra
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:7:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5b0495aabbcdd441e28ae0f206325f4f\jetified-facebook-login-5.15.3\AndroidManifest.xml:28:5-29:19
@@ -241,6 +247,8 @@ MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gra
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5b0495aabbcdd441e28ae0f206325f4f\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
@@ -265,6 +273,8 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratik\.grad
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\ed634e806a076badd907ecf770cbaa68\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\516fe5ba6e7a5904110f03fcfac34d32\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\516fe5ba6e7a5904110f03fcfac34d32\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e8b0310bcdb65e4a1dc4f08da1c1ae24\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e8b0310bcdb65e4a1dc4f08da1c1ae24\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\d16127dc554a37d27c8f0f3704db4fe3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\d16127dc554a37d27c8f0f3704db4fe3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\37583440522da5eea6ca9cc5c024ba8b\jetified-play-services-auth-19.0.0\AndroidManifest.xml:20:5-44
@@ -335,12 +345,14 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratik\.g
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\03b324c1985b8c58d53e2db13ae4fc21\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\88e8c17d9d9a93d4f7d0bad296ed0634\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\88e8c17d9d9a93d4f7d0bad296ed0634\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\caebeefe6e6845710b0fb5a0bef7ea2e\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\caebeefe6e6845710b0fb5a0bef7ea2e\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\fe3daf4af58530a50985099ec0c78ecd\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\fe3daf4af58530a50985099ec0c78ecd\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\7b95f164d9500f3002198691283ee900\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\7b95f164d9500f3002198691283ee900\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a651d4c106e2a38729c88de69fefa250\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\063d51b4c0d2d4546a8c7bae6522f028\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\063d51b4c0d2d4546a8c7bae6522f028\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5bc5e942bd1b737d9363303f121ae1c9\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
@@ -377,6 +389,8 @@ MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\Pra
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\7e0ba80650a4da13ab16703eca4baf29\jetified-protolite-well-known-types-17.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\291a7c3c493b1334674114fca4d550c0\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\291a7c3c493b1334674114fca4d550c0\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\df12ae8f0adf231449e64e92aadc36a0\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\df12ae8f0adf231449e64e92aadc36a0\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\47241a6f5d229c05852e9110e3ed3216\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\47241a6f5d229c05852e9110e3ed3216\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml

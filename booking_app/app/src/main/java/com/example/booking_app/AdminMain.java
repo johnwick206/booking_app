@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class AdminMain extends AppCompatActivity implements View.OnClickListener {
 
     RelativeLayout r1, r2 ,r3;
+    FloatingActionButton addRoomBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,8 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
         r1 = findViewById(R.id.event1);
         r2 = findViewById(R.id.event2);
         r3 = findViewById(R.id.event3);
+        addRoomBtn = findViewById(R.id.AddRoomBtn);
+        addRoomBtn.setOnClickListener(this);
 
         r1.setOnClickListener(this);
         r2.setOnClickListener(this);
@@ -31,7 +36,12 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
             case R.id.event1 : openDetails("Seminar 1"); break;
             case R.id.event2 : openDetails("Seminar 2"); break;
             case R.id.event3 : openDetails("Seminar 3"); break;
+            case R.id.AddRoomBtn : openFormToAddRoom(); break;
         }
+    }
+
+    private void openFormToAddRoom() {
+        startActivity(new Intent(AdminMain.this , AddRoomActivity.class));
     }
 
     private void openDetails(String name) {
@@ -39,4 +49,6 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
         intent.putExtra("Name",name);
         startActivity(intent);
     }
+
+
 }

@@ -65,11 +65,11 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/emailED"
-		app:layout_constraintBottom_toTopOf="@id/textView3"
+		app:layout_constraintBottom_toTopOf="@id/forgotPassword"
 		android:background="@mipmap/password_edittext"/>
 
 	<TextView
-		android:id="@+id/textView3"
+		android:id="@+id/forgotPassword"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="209dp"
@@ -80,7 +80,9 @@
 		android:text="forget Password??"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/PassWordED" />
+		app:layout_constraintTop_toBottomOf="@+id/PassWordED"
+		android:clickable="true"
+		android:focusable="true"/>
 
 	<Button
 		android:id="@+id/LoginBtn"
@@ -92,7 +94,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/textView3"
+		app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
 		app:layout_constraintBottom_toTopOf="@id/textView4"
 		android:paddingHorizontal="30dp"
 		android:background="@drawable/blue_btn"

@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,6 +22,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -30,7 +34,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 	private Button googleLoginBtn , twitterLoginBtn , fbLoginBtn , loginBtn;
-	private TextView moveToSignUp;
+	private TextView moveToSignUp , forgotPassword;
 	private EditText emailT , passwordT;
 
 	private FirebaseAuth mAuth;
@@ -67,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		twitterLoginBtn = findViewById(R.id.TwitterLoginBtn);
 		fbLoginBtn = findViewById(R.id.FBLoginBtn);
 		moveToSignUp = findViewById(R.id.MoveToSIgnUp);
+		forgotPassword = findViewById(R.id.forgotPassword);
 	}
 
 	private void setClickListener() {
@@ -76,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		twitterLoginBtn.setOnClickListener(this);
 		fbLoginBtn.setOnClickListener(this);
 		moveToSignUp.setOnClickListener(this);
+		forgotPassword.setOnClickListener(this);
 
 	}
 
@@ -87,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			case R.id.TwitterLoginBtn : twitterLogin(); break;
 			case R.id.FBLoginBtn : fbLogin(); break;
 			case R.id.MoveToSIgnUp : moveTosignUpPage(); break;
+			case R.id.forgotPassword : forgetPass(); break;
 		}
 	}
 
@@ -217,4 +224,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		startActivity(new Intent(MainActivity.this , CategoryActivity.class));
 		finish();
 	}
+
+	private void forgetPass(){
+		final EditText resetMail=new EditText(this);
+		AlertDialog.Builder passwordResetDialogue = new AlertDialog.Builder(this);
+		passwordResetDialogue.setTitle("Reset Password!!");
+		passwordResetDialogue.setMessage("Enter Email to recieve link for Reset :");
+		passwordResetDialogue.setView(resetMail);
+		passwordResetDialogue.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+
+				String mail=resetMail.getText().toString();
+				mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+					@Override
+					public void onSuccess(Void aVoid) {
+						Toast.makeText(MainActivity.this,"Reset Link sent",Toast.LENGTH_SHORT).show();
+					}
+				}).addOnFailureListener(new OnFailureListener() {
+					@Override
+					public void onFailure(@NonNull Exception e) {
+						Toast.makeText(MainActivity.this,"Error,no reset link Sent",Toast.LENGTH_SHORT).show();
+					}
+				});
+
+			}
+		});
+		passwordResetDialogue.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+
+			}
+		});
+		passwordResetDialogue.create().show();
+	}
+
 }
