@@ -34,6 +34,15 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         refUI();
         signUpBtn.setOnClickListener(this);
+
+        //on close verifiction dialog
+
+        VerifyMailDialogBox.setOnCLickOk(new VerifyMailDialogBox.onCLickOk() {
+            @Override
+            public void checkStatus() {
+                checkVerifyStatus();
+            }
+        });
     }
 
     private void refUI() {
@@ -75,27 +84,63 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             return;
         }
 
-        progressDialog = new ProgressDialog(this);
+       /* progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Login");
         progressDialog.setMessage("Initializing....");
         progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.show();
+        progressDialog.show();*/
 
         //create new Account
         mAuth.createUserWithEmailAndPassword(emailS , passwordS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    startActivity(new Intent(SignUp.this, CategoryActivity.class));
-                    Toast.makeText(SignUp.this, "Sign Up complete", Toast.LENGTH_SHORT).show();
-                    finish();
+                    sendVerification();
                 }else {
-                    progressDialog.dismiss();
+                   // progressDialog.dismiss();
                     Toast.makeText(SignUp.this, "Sign Up failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+    }
+    private void sendVerification(){
+        FirebaseUser user = mAuth.getCurrentUser();
+        assert user != null;
+        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()) checkVerifyStatus();
+                else
+                    Toast.makeText(SignUp.this, "Failed to share Verification mail", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void checkVerifyStatus(){
+       final FirebaseUser user = mAuth.getCurrentUser();
+
+        assert user != null;
+        user.reload().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(!user.isEmailVerified()){
+
+                    VerifyMailDialogBox verifyMailDialogBox = new VerifyMailDialogBox();
+                    verifyMailDialogBox.show(getSupportFragmentManager() , "not verified");
+                }else{
+
+                    startActivity(new Intent(SignUp.this, CategoryActivity.class));
+                    Toast.makeText(SignUp.this, "Sign Up complete", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        checkVerifyStatus();
     }
 }

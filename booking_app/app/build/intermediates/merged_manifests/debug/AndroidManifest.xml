@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.booking_app.AddRoomActivity" />
         <activity android:name="com.example.booking_app.AdminEventDetails" />
         <activity android:name="com.example.booking_app.AdminMain" />
         <activity android:name="com.example.booking_app.FormActivity" />
