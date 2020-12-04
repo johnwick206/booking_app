@@ -11,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddRoomActivity"></activity>
-        <activity android:name=".AdminEventDetails" />
-        <activity android:name=".AdminMain" />
-        <activity android:name=".FormActivity" />
-        <activity android:name=".BookingTypeActivity" />
-        <activity android:name=".CategoryActivity" />
+        <activity android:name=".Admin.BookedSlots"></activity>
+        <activity android:name=".Admin.AddRoomActivity" />
+        <activity android:name=".Admin.AdminEventDetails" />
+        <activity android:name=".Admin.AdminMain" />
+        <activity android:name=".User.FormActivity" />
+        <activity android:name=".User.BookingTypeActivity" />
+        <activity android:name=".User.CategoryActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">
             <intent-filter>

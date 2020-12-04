@@ -9,4 +9,9 @@
         <item>F-Block</item>
         <item>M-Block</item>
     </string-array>
+    <string-array name="RoomType">
+        <item>classroom</item>
+        <item>lab</item>
+        <item>seminar</item>
+    </string-array>
 </resources>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminMain"
+    tools:context=".Admin.AdminMain"
     android:background="@mipmap/bg_2">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/pageTitle"
         android:layout_width="match_parent"
@@ -18,125 +21,39 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"/>
 
-  <RelativeLayout
-      android:id="@+id/event1"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@mipmap/titlebar"
-      android:layout_below="@id/pageTitle"
-      android:gravity="center"
-      android:layout_marginTop="10dp"
-      android:clickable="true"
-      android:focusable="true"
-      android:transitionName="adminCardT">
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:text="Seminar - 1"/>
-
-  </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/event2"
+    <View
+        android:id="@+id/classroomCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event1"
-        android:background="@mipmap/titlebar"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/pageTitle"
+        android:layout_margin="15dp"
+        android:background="@mipmap/clsroomcard"
+        android:transitionName="cardTransition"
         android:clickable="true"
-        android:focusable="true"
-        android:transitionName="adminCardT">
+        android:focusable="true"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Seminar - 2"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/event3"
+    <View
+        android:id="@+id/LabCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event2"
-        android:background="@mipmap/titlebar"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/classroomCard"
+        android:layout_margin="15dp"
+        android:background="@mipmap/labcard"
+        android:transitionName="cardTransition"
         android:clickable="true"
-        android:focusable="true"
-        android:transitionName="adminCardT">
+        android:focusable="true"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Seminar - 3"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/event4"
+    <View
+        android:id="@+id/SeminarCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event3"
-        android:background="@mipmap/titlebar"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/LabCard"
+        android:layout_margin="15dp"
+        android:background="@mipmap/seminarcard"
+        android:transitionName="cardTransition"
         android:clickable="true"
-        android:focusable="true"
-        android:transitionName="adminCardT">
+        android:focusable="true"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Seminar - 4"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/event5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event4"
-        android:background="@mipmap/titlebar"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:transitionName="adminCardT">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Seminar - 5"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/event6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/event5"
-        android:background="@mipmap/titlebar"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:transitionName="adminCardT">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Seminar - 6"/>
-
-    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/AddRoomBtn"
@@ -147,5 +64,6 @@
         android:layout_margin="20dp"
         android:src="@drawable/add_btn"/>
 
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>

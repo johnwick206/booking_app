@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminEventDetails">
+    tools:context=".Admin.AdminEventDetails">
 
     <RelativeLayout
         android:id="@+id/SeminarName"
@@ -37,6 +37,7 @@
         android:gravity="center">
 
         <TextView
+            android:id="@+id/organizerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

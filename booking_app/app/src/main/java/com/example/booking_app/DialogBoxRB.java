@@ -12,18 +12,22 @@ import androidx.fragment.app.DialogFragment;
 public class DialogBoxRB extends DialogFragment {
     private static onClickBlocks blockInterfaceRef;
    private int ref = 0;
+   private String[] optionList;
+
+    public DialogBoxRB(String[] optionList) {
+        this.optionList = optionList;
+    }
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        final String[] list = getActivity().getResources().getStringArray(R.array.Blocks);
         builder.setTitle("Block")
-                .setSingleChoiceItems(list, 0, new DialogInterface.OnClickListener() {
+                .setSingleChoiceItems(optionList, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        blockInterfaceRef.setBlockName(list[i]);
+                        blockInterfaceRef.setBlockName(optionList[i]);
                     }
                 })
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
