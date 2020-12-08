@@ -85,15 +85,18 @@ public class BookingTypeActivity extends AppCompatActivity implements View.OnCli
         c.set(Calendar.MONTH , month);
         c.set(Calendar.DAY_OF_MONTH , day);
 
-        String occasionDate = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
-        String movieSortingParameter = String.valueOf(c.get(Calendar.DAY_OF_YEAR)); //list sorting parameter to sort events
-        setDateBtn.setText(occasionDate);
+        String occasionDate = DateFormat.getDateInstance(DateFormat.SHORT).format(c.getTime());
+        String[] splitDate = occasionDate.split("/");
+        String dateChangeFormat = splitDate[0] + "-"+ splitDate[1] + "-" + splitDate[2];
+        setDateBtn.setText(dateChangeFormat);
     }
 
     private void openRoom( CardView card,String name) {
         Intent intent = new Intent(BookingTypeActivity.this , FormActivity.class);
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(BookingTypeActivity.this , card , "cardTransition2");
         intent.putExtra("room" , name);
+        intent.putExtra("date" , setBlockBtn.getText());
+        intent.putExtra("block" , setBlockBtn.getText());
         startActivity(intent,optionsCompat.toBundle());
     }
 
