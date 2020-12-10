@@ -16,7 +16,7 @@
         <activity android:name=".Admin.AdminEventDetails" />
         <activity android:name=".Admin.AdminMain" />
         <activity android:name=".User.FormActivity" />
-        <activity android:name=".User.BookingTypeActivity" />
+        <activity android:name=".User.SortRoomActivity" />
         <activity android:name=".User.CategoryActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">

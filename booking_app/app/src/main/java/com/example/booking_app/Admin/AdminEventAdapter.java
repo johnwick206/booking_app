@@ -29,11 +29,12 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
 
     @Override
     protected void onBindViewHolder(@NonNull EventHolder holder, int position, @NonNull final AdminEventModel model) {
-        holder.slotNAme.setText(model.getName());
+        holder.slotNAme.setText(model.getSeminarName());
+        holder.date.setText(model.getDate());
         holder.slotNAme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.showDetails(model.getName());
+                listener.showDetails(model.getSeminarName());
             }
         });
     }
@@ -47,10 +48,11 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
 
 
     public class EventHolder extends RecyclerView.ViewHolder{
-        TextView slotNAme;
+        TextView slotNAme , date;
         public EventHolder(@NonNull View itemView) {
             super(itemView);
             slotNAme = itemView.findViewById(R.id.slotName);
+            date = itemView.findViewById(R.id.date);
         }
     }
 

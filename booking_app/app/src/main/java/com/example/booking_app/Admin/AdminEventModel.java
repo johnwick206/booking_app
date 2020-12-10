@@ -1,7 +1,7 @@
 package com.example.booking_app.Admin;
 
 public class AdminEventModel {
-    String block ,name, category,date,description,email,organizer,roomNo ,slot,splRequirement;
+    String block ,seminarName, category,date,description,email,organizer,roomNo ,slot,splRequirement;
 
     public AdminEventModel() {
         //for firebase //keep it empty
@@ -9,7 +9,7 @@ public class AdminEventModel {
 
     public AdminEventModel(
              String block
-            , String name
+            , String seminarName
             , String category
             , String date
             , String description
@@ -19,7 +19,7 @@ public class AdminEventModel {
             , String slot
             , String splRequirement) {
         this.block = block;
-        this.name = name;
+        this.seminarName = seminarName;
         this.category = category;
         this.date = date;
         this.description = description;
@@ -35,8 +35,8 @@ public class AdminEventModel {
         return block;
     }
 
-    public String getName() {
-        return name;
+    public String getSeminarName() {
+        return seminarName;
     }
 
     public String getCategory() {
@@ -44,7 +44,9 @@ public class AdminEventModel {
     }
 
     public String getDate() {
-        return date;
+        String[] dateArray = date.split("-");
+        String dateFormat = dateArray[2] + "-" + dateArray[1] + "-" + dateArray[0] ;
+        return dateFormat;
     }
 
     public String getDescription() {

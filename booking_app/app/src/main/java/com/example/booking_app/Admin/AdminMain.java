@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.example.booking_app.R;
+import com.example.booking_app.RoomDetails;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -24,9 +25,13 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
 
         addRoomBtn = findViewById(R.id.AddRoomBtn);
         bookedClass = findViewById(R.id.classroomCard);
+        bookedLab = findViewById(R.id.LabCard);
+        bookedSeminar = findViewById(R.id.SeminarCard);
 
         addRoomBtn.setOnClickListener(this);
         bookedClass.setOnClickListener(this);
+        bookedLab.setOnClickListener(this);
+        bookedSeminar.setOnClickListener(this);
 
     }
 
@@ -34,16 +39,16 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.AddRoomBtn : openFormToAddRoom(); break;
-            case R.id.classroomCard : displaySlots("seminars"); break;
-            case R.id.LabCard : displaySlots("BookedLabSlots"); break;
-            case R.id.SeminarCard :displaySlots("seminar"); break;
+            case R.id.classroomCard : displaySlots("ClassRoom"); break;
+            case R.id.LabCard : displaySlots("Lab"); break;
+            case R.id.SeminarCard :displaySlots("Seminar Hall"); break;
             default: break;
         }
     }
 
-   private void displaySlots(String slotCategory){
+   private void displaySlots(String roomType){
         Intent intent = new Intent(AdminMain.this , BookedSlots.class);
-        intent.putExtra("SlotCategory",slotCategory);
+       RoomDetails.roomType = roomType;
         startActivity(intent);
    }
 

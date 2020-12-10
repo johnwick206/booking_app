@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.booking_app.R;
+import com.example.booking_app.RoomDetails;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -40,7 +41,7 @@ public class BookedSlots extends AppCompatActivity {
         fireStore = FirebaseFirestore.getInstance();
 
 
-        String collectionName = getIntent().getStringExtra("SlotCategory");
+        String collectionName = RoomDetails.roomType;
 
       /*  assert collectionName != null;
         fireStore.collection(collectionName).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -72,7 +73,7 @@ public class BookedSlots extends AppCompatActivity {
     }
 
     private void adapterFn(String collectionName){
-        Query query = fireStore.collection(collectionName).orderBy("roomNo",Query.Direction.DESCENDING);
+        Query query = fireStore.collection( "Booking: " + collectionName).orderBy("date",Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<AdminEventModel> options = new FirestoreRecyclerOptions.Builder<AdminEventModel>().setQuery(query , AdminEventModel.class).build();
         adapter = new AdminEventAdapter(options);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

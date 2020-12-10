@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.booking_app.R;
+import com.example.booking_app.RoomDetails;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
@@ -48,7 +49,7 @@ public class AdminEventDetails extends AppCompatActivity {
 
 
     private void displayDetails(String name) {
-        final DocumentReference docRef = db.collection("seminars").document(name);
+        final DocumentReference docRef = db.collection("Booking: "+ RoomDetails.roomType).document(name);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

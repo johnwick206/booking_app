@@ -219,10 +219,10 @@ activity#com.example.booking_app.User.FormActivity
 ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:9-55
 	android:name
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:19-52
-activity#com.example.booking_app.User.BookingTypeActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:9-62
+activity#com.example.booking_app.User.SortRoomActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:9-59
 	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:19-59
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:19-56
 activity#com.example.booking_app.User.CategoryActivity
 ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:20:9-59
 	android:name

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_bg"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp">
 
     <TextView
         android:id="@+id/slotName"
@@ -9,12 +12,22 @@
         android:layout_height="wrap_content"
         android:text="seminar-1"
         android:gravity="center"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/white_round_bg"
+        android:textColor="#000"
+        android:layout_centerVertical="true"
         android:textSize="30dp"
         android:paddingVertical="10dp"
-        android:layout_marginTop="20dp"
         android:clickable="true"
         android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16-06-2021"
+        android:layout_below="@id/slotName"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"/>
 
 </RelativeLayout>

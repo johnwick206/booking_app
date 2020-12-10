@@ -35,7 +35,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-	private Button googleLoginBtn , twitterLoginBtn , fbLoginBtn , loginBtn;
+	private Button googleLoginBtn , loginBtn;
 	private TextView moveToSignUp , forgotPassword;
 	private EditText emailT , passwordT;
 
@@ -70,8 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		loginBtn = findViewById(R.id.LoginBtn);
 		googleLoginBtn = findViewById(R.id.GoogleLoginBtn);
-		twitterLoginBtn = findViewById(R.id.TwitterLoginBtn);
-		fbLoginBtn = findViewById(R.id.FBLoginBtn);
 		moveToSignUp = findViewById(R.id.MoveToSIgnUp);
 		forgotPassword = findViewById(R.id.forgotPassword);
 	}
@@ -80,8 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		loginBtn.setOnClickListener(this);
 		googleLoginBtn.setOnClickListener(this);
-		twitterLoginBtn.setOnClickListener(this);
-		fbLoginBtn.setOnClickListener(this);
 		moveToSignUp.setOnClickListener(this);
 		forgotPassword.setOnClickListener(this);
 
@@ -92,8 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		switch(view.getId()){
 			case R.id.LoginBtn : login(); break;
 			case R.id.GoogleLoginBtn : googleLogin();  break;
-			case R.id.TwitterLoginBtn : twitterLogin(); break;
-			case R.id.FBLoginBtn : fbLogin(); break;
 			case R.id.MoveToSIgnUp : moveTosignUpPage(); break;
 			case R.id.forgotPassword : forgetPass(); break;
 		}
@@ -154,12 +148,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	private void googleLogin() {
 		Intent signInIntent = mGoogleSignInClient.getSignInIntent();
 		startActivityForResult(signInIntent,RC_SIGN_IN);
-	}
-
-	private void twitterLogin() {
-	}
-
-	private void fbLogin() {
 	}
 
 	private void moveTosignUpPage() {

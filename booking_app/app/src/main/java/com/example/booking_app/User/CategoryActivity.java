@@ -45,7 +45,7 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void makeTransition(View view ,String name) {
-        Intent intent = new Intent(CategoryActivity.this , BookingTypeActivity.class);
+        Intent intent = new Intent(CategoryActivity.this , SortRoomActivity.class);
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(CategoryActivity.this
                 , view
                 , "cardTransition");

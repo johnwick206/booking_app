@@ -29,7 +29,7 @@
         <activity android:name="com.example.booking_app.Admin.AdminEventDetails" />
         <activity android:name="com.example.booking_app.Admin.AdminMain" />
         <activity android:name="com.example.booking_app.User.FormActivity" />
-        <activity android:name="com.example.booking_app.User.BookingTypeActivity" />
+        <activity android:name="com.example.booking_app.User.SortRoomActivity" />
         <activity android:name="com.example.booking_app.User.CategoryActivity" />
         <activity android:name="com.example.booking_app.SignUp" />
         <activity android:name="com.example.booking_app.MainActivity" >

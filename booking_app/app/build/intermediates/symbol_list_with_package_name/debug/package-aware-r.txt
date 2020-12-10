@@ -1601,6 +1601,7 @@ drawable abc_vector_test
 drawable add_btn
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg1
 drawable blue_black_bg
 drawable blue_btn
 drawable btn_checkbox_checked_mtrl
@@ -1723,7 +1724,6 @@ id CategoryName
 id CategoryTitle
 id DateSetBtn
 id EmailED
-id FBLoginBtn
 id FUNCTION
 id GoogleLoginBtn
 id LabCard
@@ -1744,11 +1744,9 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id SeminarCard
-id SeminarName
 id SignUpBtn
 id TOP_END
 id TOP_START
-id TwitterLoginBtn
 id UserNameED
 id accelerate
 id accessibility_action_clickable_span
@@ -2027,7 +2025,6 @@ id notification_main_column_container
 id off
 id on
 id open_graph
-id organizer
 id organizerName
 id organizingBody
 id outline
@@ -2087,6 +2084,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signInBox
 id sin
 id skipCollapsed
 id slide
@@ -2346,13 +2344,14 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+mipmap bg13
+mipmap bg14
 mipmap bg_2
 mipmap card
 mipmap card_block
 mipmap clsroomcard
 mipmap email_edittext
-mipmap fb_btn
-mipmap googlebtn
+mipmap google_signin_btn
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap labcard
@@ -2361,7 +2360,6 @@ mipmap page_bg
 mipmap password_edittext
 mipmap seminarcard
 mipmap titlebar
-mipmap twitterbtn
 mipmap type_bg
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
