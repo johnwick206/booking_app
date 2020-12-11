@@ -1738,7 +1738,6 @@ id CategoryTitle
 id DateSetBtn
 id EmailED
 id FUNCTION
-id GoogleLoginBtn
 id LabCard
 id LinearLayout
 id LoginBtn
@@ -2156,7 +2155,6 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
-id textView4
 id textView5
 id text_input_end_icon
 id text_input_start_icon
@@ -2384,6 +2382,7 @@ mipmap password_edittext
 mipmap seminarcard
 mipmap titlebar
 mipmap type_bg
+mipmap vit_logo
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

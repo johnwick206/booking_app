@@ -10,6 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/vit_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"/>
+
     <EditText
         android:id="@+id/UserNameED"
         android:layout_width="match_parent"
@@ -105,32 +113,6 @@
         android:background="@drawable/blue_btn"
         android:paddingHorizontal="30dp"
         android:textColor="#fff"/>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="109dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="29dp"
-        android:text="- OR -"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignUpBtn" />
-
-
-        <Button
-            android:id="@+id/GoogleLoginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:paddingVertical="20sp"
-            android:background="@mipmap/google_signin_btn"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginHorizontal="50dp"/>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

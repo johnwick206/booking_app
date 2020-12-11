@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
    private EditText nameT , emailT , passwordT;
-   private Button signUpBtn ,googleBtn , twitterBtn , fbBtn;
+   private Button signUpBtn ;
    private FirebaseAuth mAuth;
    private ProgressDialog progressDialog;
 
@@ -52,9 +52,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         emailT = findViewById(R.id.EmailED);
         passwordT = findViewById(R.id.PasswordED);
         signUpBtn = findViewById(R.id.SignUpBtn);
-        /*googleBtn = findViewById(R.id.GoogleLoginBtn);
-        twitterBtn = findViewById(R.id.TwitterLoginBtn);
-        fbBtn = findViewById(R.id.FBLoginBtn);*/
 
     }
 
@@ -140,8 +137,4 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        checkVerifyStatus();
-    }
 }

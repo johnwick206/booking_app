@@ -35,16 +35,13 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-	private Button googleLoginBtn , loginBtn;
+	private Button loginBtn;
 	private TextView moveToSignUp , forgotPassword;
 	private EditText emailT , passwordT;
 
 	private FirebaseAuth mAuth;
 	private ProgressDialog progressDialog;
 
-	GoogleSignInClient mGoogleSignInClient;
-	private String TAG = "MainActivity";
-	private int RC_SIGN_IN = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		mAuth = FirebaseAuth.getInstance();
 
-		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id))
-				.requestEmail()
-				.build();
-
-		mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
 		referenceUi();
 		setClickListener();
@@ -69,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		passwordT = findViewById(R.id.PassWordED);
 
 		loginBtn = findViewById(R.id.LoginBtn);
-		googleLoginBtn = findViewById(R.id.GoogleLoginBtn);
 		moveToSignUp = findViewById(R.id.MoveToSIgnUp);
 		forgotPassword = findViewById(R.id.forgotPassword);
 	}
@@ -77,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	private void setClickListener() {
 
 		loginBtn.setOnClickListener(this);
-		googleLoginBtn.setOnClickListener(this);
 		moveToSignUp.setOnClickListener(this);
 		forgotPassword.setOnClickListener(this);
 
@@ -87,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	public void onClick(View view) {
 		switch(view.getId()){
 			case R.id.LoginBtn : login(); break;
-			case R.id.GoogleLoginBtn : googleLogin();  break;
 			case R.id.MoveToSIgnUp : moveTosignUpPage(); break;
 			case R.id.forgotPassword : forgetPass(); break;
 		}
@@ -145,75 +134,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		return email.equals("adminvit2125@gmail.com") && password.equals("123456");
 	}
 
-	private void googleLogin() {
-		Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-		startActivityForResult(signInIntent,RC_SIGN_IN);
-	}
 
 	private void moveTosignUpPage() {
 		startActivity(new Intent(MainActivity.this , SignUp.class));
 	}
 
-
-	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		if(requestCode == RC_SIGN_IN){
-			Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-			handlesSignInResult(task);
-		}
-	}
-	private void  handlesSignInResult (Task<GoogleSignInAccount> completedTask){
-		try {
-			GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
-			Toast.makeText(MainActivity.this, "Signed in Successfully", Toast.LENGTH_SHORT).show();
-			FirebaseGoogleAuth(acc);
-		} catch (ApiException e) {
-			Toast.makeText(MainActivity.this, "Signed in Failed",Toast.LENGTH_SHORT).show();
-			FirebaseGoogleAuth(null);
-
-		}
-	}
-
-	private void FirebaseGoogleAuth(GoogleSignInAccount acct){
-		AuthCredential authCredential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-		mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(@NonNull Task<AuthResult> task) {
-				if(task.isSuccessful()){
-					Toast.makeText(MainActivity.this, "Success",Toast.LENGTH_SHORT).show();
-					FirebaseUser user = mAuth.getCurrentUser();
-					updateUI(user);
-
-				}
-				else{
-					Toast.makeText(MainActivity.this, "Failed",Toast.LENGTH_SHORT).show();
-					updateUI(null);
-				}
-
-			}
-		});
-
-
-
-	}
-	private void updateUI(FirebaseUser fUser){
-		//next page code
-		GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
-		if (account != null){
-			String personName = account.getDisplayName();
-			String personGivenName = account.getGivenName();
-			String personFamilyName = account.getFamilyName();
-			String personEmail = account.getEmail();
-			String personId = account.getId();
-
-			Toast.makeText(MainActivity.this, personName + personEmail, Toast.LENGTH_SHORT).show();
-		}
-
-		referenceUi();
-		setClickListener();
-		startActivity(new Intent(MainActivity.this , CategoryActivity.class));
-		finish();
-	}
 
 	//Password Reset
 	private void forgetPass(){

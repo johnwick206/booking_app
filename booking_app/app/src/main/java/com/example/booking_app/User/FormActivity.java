@@ -88,7 +88,7 @@ public class FormActivity extends AppCompatActivity {
     private void bookSeminar() {
 
             // TODO: 09-12-2020 list checkboxes 
-           /* ArrayList<CheckBox> checkBoxList = new ArrayList<>();
+        /*    ArrayList<CheckBox> checkBoxList = new ArrayList<>();
             checkBoxList.add(c1);
             checkBoxList.add(c2);
             checkBoxList.add(c3);
@@ -105,14 +105,38 @@ public class FormActivity extends AppCompatActivity {
             map1.put(checkBoxList.get(2).getText().toString() , value[2] );
 
            if(!map1.containsValue(1))
-               return;*/
-
+               return;
+*/
             try {
                 dialog = new ProgressDialog(FormActivity.this);
                 dialog.setTitle("Add");
                 dialog.setMessage("Adding");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
+
+
+                // TODO: 10-12-2020 select slots
+            /*for(i = 0 ; i < checkBoxList.size() ;  i++)
+                if(checkBoxList.get(i).isChecked())
+                    map.put(checkBoxList.get(i).getText().toString() , 1);
+
+                    DocumentReference dateReference = fireStore.collection("Date")
+                    .document(date)
+                    .collection("classroom")
+                    .document("block")
+                    .collection(block)
+                    .document(roomTitleS);
+
+            dateReference.set(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful())
+                        System.out.println("added to date collection");
+                    //added to date collection
+                    else
+                        System.out.println("Failed to add in date collection");
+                }
+            });*/
 
                 roomTitleS = roomTitle.getText().toString();
                 seminarNameS = seminarNameET.getText().toString();
@@ -133,30 +157,6 @@ public class FormActivity extends AppCompatActivity {
                 map.put("date", date);
                 map.put("block", block);
                 map.put("slot" , "9-10");
-
-                // TODO: 10-12-2020 select slots
-           /* for(i = 0 ; i < checkBoxList.size() ;  i++)
-                if(checkBoxList.get(i).isChecked())
-                    map.put(checkBoxList.get(i).getText().toString() , 1);
-
-                    DocumentReference dateReference = fireStore.collection("Date")
-                    .document(date)
-                    .collection("classroom")
-                    .document("block")
-                    .collection(block)
-                    .document(roomTitleS);
-
-            dateReference.set(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful())
-                        System.out.println("added to date collection");
-                    //added to date collection
-                    else
-                        System.out.println("Failed to add in date collection");
-                }
-            });
-*/
 
                 DocumentReference seminarsReference = fireStore.collection("Booking: " + RoomDetails.roomType)
                         .document(seminarNameS);
