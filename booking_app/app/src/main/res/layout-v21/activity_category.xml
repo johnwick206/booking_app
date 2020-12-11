@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User.CategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/welcomeMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome\n to Vidyalankar"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:error_image="@mipmap/default_img"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:placeholder="@mipmap/default_img"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:period="1500"
+        app:corner_radius="10"
+        android:layout_below="@id/welcomeMsg"/>
 
     <View
         android:id="@+id/classroomCard"
@@ -12,7 +41,8 @@
         android:layout_height="200dp"
         android:layout_margin="15dp"
         android:background="@mipmap/clsroomcard"
-        android:transitionName="cardTransition"/>
+        android:transitionName="cardTransition"
+        android:layout_below="@id/imageSlider"/>
 
     <View
         android:id="@+id/LabCard"
@@ -32,4 +62,6 @@
         android:background="@mipmap/seminarcard"
         android:transitionName="cardTransition"/>
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

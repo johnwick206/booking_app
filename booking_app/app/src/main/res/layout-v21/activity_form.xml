@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User.FormActivity"
-    android:background="@mipmap/page_bg">
+    android:background="@mipmap/bg14">
 
     <TextView
         android:id="@+id/RoomName"
@@ -156,7 +156,8 @@
             android:text="Book"
             android:background="@drawable/blue_btn"
             android:paddingHorizontal="40dp"
-            android:textColor="#fff"/>
+            android:textColor="#fff"
+            android:layout_marginBottom="30dp"/>
 
             </RelativeLayout>
 

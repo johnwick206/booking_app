@@ -190,6 +190,11 @@
                 <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
             </intent-filter>
         </receiver>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.booking_app.com.squareup.picasso"
+            android:exported="false" />
     </application>
 
 </manifest>

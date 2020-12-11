@@ -353,6 +353,15 @@
 190-->[com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c9ec81b904b9ef43b236923d651ce969\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
 191            </intent-filter>
 192        </receiver>
-193    </application>
-194
-195</manifest>
+193
+194        <provider
+194-->[com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+195            android:name="com.squareup.picasso.PicassoProvider"
+195-->[com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+196            android:authorities="com.example.booking_app.com.squareup.picasso"
+196-->[com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+197            android:exported="false" />
+197-->[com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+198    </application>
+199
+200</manifest>

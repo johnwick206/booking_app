@@ -8,6 +8,7 @@ MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Pratik\.gradle\caches\tr
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.0.6] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\37e09f5ee1f1443142582171a3eeaf22\jetified-ImageSlideshow-0.0.6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5b0495aabbcdd441e28ae0f206325f4f\jetified-facebook-login-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\1cc87f1d87c91fac481e928242f8a0fd\jetified-facebook-share-5.15.3\AndroidManifest.xml:21:1-31:12
@@ -68,9 +69,11 @@ MERGED from [androidx.core:core:1.3.1] C:\Users\Pratik\.gradle\caches\transforms
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\f9945fa6f6a9766686c8d7c586a0a17e\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.0.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\761d8887433691c62d63a2962cf7bcac\jetified-firebase-components-16.0.1\AndroidManifest.xml:15:1-23:12
 MERGED from [com.firebaseui:firebase-ui-common:6.3.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\66e467bcf4cc00bb3a7560801e50d14c\jetified-firebase-ui-common-6.3.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\947def8ce0cc1c0bf6ed1295dcab98a1\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\ffda0c2a0afefaa89379f66201a349e0\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5cd3408646d7a5036242ca316782bcf7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\513829be80b246266fcc55e01b8e3290\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a13b313aefc896400d1fec7895e53237\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e63c2f72e555839c577a0314705899e4\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c429c5be8c3bef8ecf7b81cf463e7f07\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
@@ -181,6 +184,8 @@ MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\
 MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c9ec81b904b9ef43b236923d651ce969\jetified-facebook-core-5.15.3\AndroidManifest.xml:28:5-51:19
 MERGED from [androidx.core:core:1.3.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\38c4e2211f572c07747ccf408cd88ab2\core-1.3.1\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\38c4e2211f572c07747ccf408cd88ab2\core-1.3.1\AndroidManifest.xml:24:5-89
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\947def8ce0cc1c0bf6ed1295dcab98a1\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\947def8ce0cc1c0bf6ed1295dcab98a1\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\47241a6f5d229c05852e9110e3ed3216\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
@@ -257,6 +262,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\cc718053871a5905a810633fa90575c8\material-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.0.6] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\37e09f5ee1f1443142582171a3eeaf22\jetified-ImageSlideshow-0.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.0.6] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\37e09f5ee1f1443142582171a3eeaf22\jetified-ImageSlideshow-0.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\90e2ceb4ccfe927975a12ff008f9d21c\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5b0495aabbcdd441e28ae0f206325f4f\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
@@ -377,12 +384,16 @@ MERGED from [com.google.firebase:firebase-components:16.0.1] C:\Users\Pratik\.gr
 MERGED from [com.google.firebase:firebase-components:16.0.1] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\761d8887433691c62d63a2962cf7bcac\jetified-firebase-components-16.0.1\AndroidManifest.xml:19:5-21:41
 MERGED from [com.firebaseui:firebase-ui-common:6.3.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\66e467bcf4cc00bb3a7560801e50d14c\jetified-firebase-ui-common-6.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.firebaseui:firebase-ui-common:6.3.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\66e467bcf4cc00bb3a7560801e50d14c\jetified-firebase-ui-common-6.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\947def8ce0cc1c0bf6ed1295dcab98a1\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\947def8ce0cc1c0bf6ed1295dcab98a1\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\ffda0c2a0afefaa89379f66201a349e0\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\ffda0c2a0afefaa89379f66201a349e0\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5cd3408646d7a5036242ca316782bcf7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\5cd3408646d7a5036242ca316782bcf7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\513829be80b246266fcc55e01b8e3290\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\513829be80b246266fcc55e01b8e3290\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a13b313aefc896400d1fec7895e53237\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\a13b313aefc896400d1fec7895e53237\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e63c2f72e555839c577a0314705899e4\interpolator-1.0.0\AndroidManifest.xml:20:5-44
@@ -669,3 +680,11 @@ action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
 ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c9ec81b904b9ef43b236923d651ce969\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:17-95
 	android:name
 		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\c9ec81b904b9ef43b236923d651ce969\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\32c51cd39398e2ad98cbcb3edf97c6d2\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
