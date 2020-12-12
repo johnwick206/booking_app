@@ -62,9 +62,9 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.classroomCard:makeTransition(clsRoomCard , "ClassRoom"); break;
-            case R.id.LabCard: makeTransition(labCard , "Lab"); break;
-            case R.id.SeminarCard:makeTransition(seminarCard , "Seminar Hall"); break;
+            case R.id.classroomCard:makeTransition(clsRoomCard , "classroom"); break;
+            case R.id.LabCard: makeTransition(labCard , "lab"); break;
+            case R.id.SeminarCard:makeTransition(seminarCard , "seminar hall"); break;
 
         }
     }

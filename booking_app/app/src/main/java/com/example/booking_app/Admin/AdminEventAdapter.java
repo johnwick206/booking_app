@@ -47,7 +47,7 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
     }
 
 
-    public class EventHolder extends RecyclerView.ViewHolder{
+    public static class EventHolder extends RecyclerView.ViewHolder{
         TextView slotNAme , date;
         public EventHolder(@NonNull View itemView) {
             super(itemView);

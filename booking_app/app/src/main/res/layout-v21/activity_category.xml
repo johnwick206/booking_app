@@ -38,16 +38,12 @@
         <View
                 android:id="@+id/classroomCard"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
                 android:layout_margin="15dp"
                 android:background="@mipmap/class_card"
                 android:foreground="@mipmap/clasrom"
-
-
                 android:transitionName="cardTransition"
-                android:layout_below="@id/imageSlider"
-
-        />
+                android:layout_below="@id/imageSlider"/>
 
 
 
@@ -55,7 +51,7 @@
     <View
         android:id="@+id/LabCard"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_below="@id/classroomCard"
         android:layout_margin="15dp"
         android:background="@mipmap/computerlab"
@@ -65,7 +61,7 @@
     <View
         android:id="@+id/SeminarCard"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_below="@id/LabCard"
         android:layout_margin="15dp"
         android:background="@mipmap/seminar"

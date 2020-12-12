@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.denzcoskun:ImageSlideshow:0.0.6@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d76567fb967bbc6d49ac848bf2977fa/jetified-ImageSlideshow-0.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d76567fb967bbc6d49ac848bf2977fa/jetified-ImageSlideshow-0.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37e09f5ee1f1443142582171a3eeaf22/jetified-ImageSlideshow-0.0.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37e09f5ee1f1443142582171a3eeaf22/jetified-ImageSlideshow-0.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37e09f5ee1f1443142582171a3eeaf22/jetified-ImageSlideshow-0.0.6/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

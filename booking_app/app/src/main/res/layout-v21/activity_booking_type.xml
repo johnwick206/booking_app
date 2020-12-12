@@ -51,12 +51,25 @@
             android:layout_gravity="center"/>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recylcerView"
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/LinearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/LinearLayout"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="10dp"/>
+        android:layout_below="@id/searchBtn"
+        android:layout_marginTop="10dp">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylcerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"/>
+    </ScrollView>
 </RelativeLayout>

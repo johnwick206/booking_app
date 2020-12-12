@@ -1,9 +1,11 @@
 package com.example.booking_app.User;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
@@ -16,10 +18,20 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.booking_app.Admin.AdminEventAdapter;
+import com.example.booking_app.Admin.AdminEventModel;
 import com.example.booking_app.CalenderFragment;
 import com.example.booking_app.DialogBoxRB;
 import com.example.booking_app.R;
 import com.example.booking_app.RoomDetails;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import java.text.DateFormat;
 import java.time.format.DateTimeFormatter;
@@ -28,10 +40,12 @@ import java.util.Calendar;
 public class SortRoomActivity extends AppCompatActivity implements View.OnClickListener , DatePickerDialog.OnDateSetListener {
 
     private TextView titleTV;
-    private Button setDateBtn , setBlockBtn;
+    private Button setDateBtn , setBlockBtn , searchBtn;
     private RecyclerView recyclerView;
+    FirebaseFirestore firestore;
+    DocumentReference dateCollectionDocument;
+    public UserSlotAdapter adapter;
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,10 +54,15 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         titleTV = findViewById(R.id.CategoryTitle);
         setDateBtn = findViewById(R.id.DateSetBtn);
         setBlockBtn = findViewById(R.id.Name);
-        recyclerView = findViewById(R.id.recylcerView);
+        searchBtn = findViewById(R.id.searchBtn);
+        recyclerView = findViewById(R.id.recylcerView2);
+
+        firestore = FirebaseFirestore.getInstance();
 
         setDateBtn.setOnClickListener(this);
         setBlockBtn.setOnClickListener(this);
+        searchBtn.setOnClickListener(this);
+
         setTitle();
 
 
@@ -53,6 +72,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 setBlockBtn.setText(blockName);
             }
         });
+
+
     }
 
     //Room Type :::: Header
@@ -67,7 +88,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.DateSetBtn: callDateFragment();break;
-            case R.id.Name: chooseBlock(); ;break;
+            case R.id.Name: chooseBlock(); break;
+            case R.id.searchBtn: search(); break;
             default: break;
         }
     }
@@ -120,4 +142,61 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         return dateChangeFormat;
     }
 
+
+    public void search() {
+
+         String currentDate, currentBlock;
+        currentDate = setDateBtn.getText().toString();
+        currentBlock = setBlockBtn.getText().toString();
+        dateCollectionDocument = firestore.collection("Date")
+                .document(currentDate)
+                .collection(RoomDetails.roomType)
+                .document("block");
+
+        //uncomment
+        dateCollectionDocument.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.getResult().exists()){
+                    //sort
+                    Toast.makeText(SortRoomActivity.this, "Not Found", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    //displayAll
+                    String[] blockCharArray = setBlockBtn.getText().toString().split("-");
+                    String block = blockCharArray[0];
+
+                    CollectionReference roomCollection = firestore.collection("classroom")
+                            .document("block")
+                            .collection("A");
+
+                    Query query = roomCollection.orderBy("roomNo" , Query.Direction.ASCENDING);
+                    FirestoreRecyclerOptions<SlotModel> options = new FirestoreRecyclerOptions.Builder<SlotModel>()
+                            .setQuery(query , SlotModel.class)
+                            .build();
+
+                    adapter = new UserSlotAdapter(options);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(SortRoomActivity.this));
+                    recyclerView.setHasFixedSize(true);
+                    recyclerView.setAdapter(adapter);
+                    adapter.startListening();
+                    Toast.makeText(SortRoomActivity.this, "display all" + task.getException(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(adapter != null)
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
 }
