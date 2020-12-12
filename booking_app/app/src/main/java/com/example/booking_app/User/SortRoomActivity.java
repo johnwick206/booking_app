@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -28,7 +29,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
     private TextView titleTV;
     private Button setDateBtn , setBlockBtn;
-    private CardView testCard1 , testCard2;
+    private RecyclerView recyclerView;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -39,13 +40,10 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         titleTV = findViewById(R.id.CategoryTitle);
         setDateBtn = findViewById(R.id.DateSetBtn);
         setBlockBtn = findViewById(R.id.Name);
-        testCard1 = findViewById(R.id.card1);
-        testCard2 = findViewById(R.id.card2);
+        recyclerView = findViewById(R.id.recylcerView);
 
         setDateBtn.setOnClickListener(this);
         setBlockBtn.setOnClickListener(this);
-        testCard1.setOnClickListener(this);
-        testCard2.setOnClickListener(this);
         setTitle();
 
 
@@ -70,8 +68,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()){
             case R.id.DateSetBtn: callDateFragment();break;
             case R.id.Name: chooseBlock(); ;break;
-            case R.id.card1:openRoom(testCard1 ,"M - 101"); break;
-            case R.id.card2:openRoom(testCard2 , "M - 102"); break;
             default: break;
         }
     }
