@@ -35,14 +35,22 @@
         app:corner_radius="10"
         android:layout_below="@id/welcomeMsg"/>
 
-    <View
-        android:id="@+id/classroomCard"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="15dp"
-        android:background="@mipmap/clsroomcard"
-        android:transitionName="cardTransition"
-        android:layout_below="@id/imageSlider"/>
+        <View
+                android:id="@+id/classroomCard"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                android:background="@mipmap/class_card"
+                android:foreground="@mipmap/clasrom"
+
+
+                android:transitionName="cardTransition"
+                android:layout_below="@id/imageSlider"
+
+        />
+
+
+
 
     <View
         android:id="@+id/LabCard"
@@ -50,7 +58,8 @@
         android:layout_height="200dp"
         android:layout_below="@id/classroomCard"
         android:layout_margin="15dp"
-        android:background="@mipmap/labcard"
+        android:background="@mipmap/computerlab"
+        android:foreground="@mipmap/lub"
         android:transitionName="cardTransition"/>
 
     <View
@@ -59,7 +68,8 @@
         android:layout_height="200dp"
         android:layout_below="@id/LabCard"
         android:layout_margin="15dp"
-        android:background="@mipmap/seminarcard"
+        android:background="@mipmap/seminar"
+        android:foreground="@mipmap/sem_hall"
         android:transitionName="cardTransition"/>
 
     </RelativeLayout>
