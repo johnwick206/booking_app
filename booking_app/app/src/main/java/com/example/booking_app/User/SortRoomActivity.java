@@ -103,7 +103,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 intent.putExtra("block" , RoomDetails.roomBlock);
                 intent.putExtra("slots" , slots);
 
-                RoomDetails.roomBlock = setBlockBtn.getText().toString();
                 RoomDetails.roomNumber = roomNo;
                 startActivity(intent);
             }

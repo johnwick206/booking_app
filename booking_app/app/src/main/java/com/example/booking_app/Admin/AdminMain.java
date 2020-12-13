@@ -39,9 +39,9 @@ public class AdminMain extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.AddRoomBtn : openFormToAddRoom(); break;
-            case R.id.classroomCard : displaySlots("ClassRoom"); break;
-            case R.id.LabCard : displaySlots("Lab"); break;
-            case R.id.SeminarCard :displaySlots("Seminar Hall"); break;
+            case R.id.classroomCard : displaySlots("classroom"); break;
+            case R.id.LabCard : displaySlots("lab"); break;
+            case R.id.SeminarCard :displaySlots("seminar hall"); break;
             default: break;
         }
     }

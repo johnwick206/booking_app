@@ -43,20 +43,6 @@ public class BookedSlots extends AppCompatActivity {
 
         String collectionName = RoomDetails.roomType;
 
-      /*  assert collectionName != null;
-        fireStore.collection(collectionName).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult()))
-                        list.add(document.getId());
-                    Toast.makeText(BookedSlots.this, "Successful", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(BookedSlots.this, "Failed to load", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
 
         //retrieved data from firebase
          adapterFn(collectionName);

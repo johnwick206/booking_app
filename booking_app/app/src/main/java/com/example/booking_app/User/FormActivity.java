@@ -2,12 +2,9 @@ package com.example.booking_app.User;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.transition.Visibility;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -33,8 +30,9 @@ public class FormActivity extends AppCompatActivity {
     private String roomTitleS , seminarNameS , descriptionS , organizingBodyS , audienceNoS ,splRequirementS;
     private String date , block , name;
     private CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9;
-    private String allSlots;
+    private String allSlots ,slotselected;
     private Button bookBtn;
+
     private int i=0;
     ArrayList<CheckBox> checkBoxList;
     ProgressDialog dialog;
@@ -61,6 +59,7 @@ public class FormActivity extends AppCompatActivity {
 
         date = getIntent().getStringExtra("date");
         allSlots=getIntent().getStringExtra("slots");
+
         roomTitle.setText(name);
         bookedDisable();
         bookBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +72,6 @@ public class FormActivity extends AppCompatActivity {
     }
 
     private void referenceUI() {
-
 
         c1 = findViewById(R.id.time1);
         c2 = findViewById(R.id.time2);
@@ -125,20 +123,19 @@ public class FormActivity extends AppCompatActivity {
 
         int[] value = {0,0,0,0,0,0,0,0,0};
         int atleastOne=0;
-        HashMap<String , String> map1 = new HashMap<>();
+
 
         while (i < checkBoxList.size()){
             if(checkBoxList.get(i).isChecked()){ value[i]=1;atleastOne=1;}
             else if(!checkBoxList.get(i).isEnabled())value[i]=1;
             i++;
         }
-        String slotselected=new String();
+
+         slotselected = new String();
 
         for(i=0;i<value.length;i++){
             slotselected=slotselected.concat(Integer.toString(value[i]));
         }
-
-        map1.put("slot" , slotselected );
 
 
        /* if(!(atleastOne > 0)) {
@@ -163,23 +160,39 @@ public class FormActivity extends AppCompatActivity {
             audienceNoS = audienceNoET.getText().toString();
             splRequirementS = splRequirementET.getText().toString();
 
-            DocumentReference dateReference = fireStore.collection("Date")
-                    .document(date)
-                    .collection(RoomDetails.roomType)
-                    .document("block")
-                    .collection(RoomDetails.roomBlock)
-                    .document(roomTitleS);
 
-            dateReference.set(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful())
-                        System.out.println("added to date collection");
-                        //added to date collection
-                    else
-                        System.out.println("Failed to add in date collection");
-                }
-            });
+            final HashMap<String , Object> map1 = new HashMap<>();
+            map1.put("roomNo", RoomDetails.roomNumber);
+            map1.put("slots" , slotselected );
+
+            final HashMap<String , Object> mapDummy = new HashMap<>();
+            mapDummy.put("dummy" , "randomValue");
+
+             final DocumentReference dateReference = fireStore.collection("Date")
+                    .document(date);
+
+             dateReference.set(mapDummy).addOnCompleteListener(new OnCompleteListener<Void>() {
+                 @Override
+                 public void onComplete(@NonNull Task<Void> task) {
+
+                    final DocumentReference a = dateReference.collection(RoomDetails.roomType).document("block");
+
+                    a.set(mapDummy).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            DocumentReference b = a.collection(RoomDetails.roomBlock).document(RoomDetails.roomNumber);
+                            b.set(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful())
+                                    Toast.makeText(FormActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    });
+                 }
+             });
+
 
 
             HashMap<String, Object> map = new HashMap<>();
