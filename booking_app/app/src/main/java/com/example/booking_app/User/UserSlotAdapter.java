@@ -14,14 +14,21 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSlotAdapter.SlotHolder> {
 
+    private static onClickRoom listener;
 
     public UserSlotAdapter(@NonNull FirestoreRecyclerOptions<SlotModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull SlotHolder holder, int position, @NonNull SlotModel model) {
+    protected void onBindViewHolder(@NonNull SlotHolder holder, int position, @NonNull final SlotModel model) {
         holder.roomNo.setText(model.getRoomNo());
+        holder.roomNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.openForm(model.getSlots() , model.getRoomNo());
+            }
+        });
     }
 
     @NonNull
@@ -38,5 +45,13 @@ public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSl
             super(itemView);
             roomNo = itemView.findViewById(R.id.RoomNo);
         }
+    }
+
+    interface onClickRoom{
+        void openForm(String slots , String roomNo);
+    }
+
+    public static void setOnCLickRoom(onClickRoom intefaceListener){
+        listener = intefaceListener;
     }
 }

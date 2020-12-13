@@ -79,6 +79,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
        // recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
+
         DialogBoxRB.setOnCLickBlockOptn(new DialogBoxRB.onClickBlocks() {
             @Override
             public void setBlockName(String blockName) {
@@ -86,6 +87,20 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+
+        UserSlotAdapter.setOnCLickRoom(new UserSlotAdapter.onClickRoom() {
+            @Override
+            public void openForm(String slots , String roomNo) {
+                Intent intent = new Intent(SortRoomActivity.this , FormActivity.class);
+                intent.putExtra("room" , roomNo);
+                intent.putExtra("date" , formatDate());
+                intent.putExtra("block" , setBlockBtn.getText());
+
+                RoomDetails.roomBlock = setBlockBtn.getText().toString();
+                RoomDetails.roomNumber = roomNo;
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -158,7 +173,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
     public void search() {
 
-         String currentDate, currentBlock;
+         final String currentDate, currentBlock;
         currentDate = setDateBtn.getText().toString();
         currentBlock = setBlockBtn.getText().toString();
         dateCollectionDocument = fireStore.collection("Date")
@@ -166,18 +181,23 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 .collection(RoomDetails.roomType)
                 .document("block");
 
-
+        //select date and block first
+        if(currentDate.equals("Date") && currentBlock.equals("Block")){
+            Toast.makeText(this, "Select Date and Block", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         //uncomment
         dateCollectionDocument.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
-                    //sort
-                    Toast.makeText(SortRoomActivity.this, "Not Found", Toast.LENGTH_SHORT).show();
+                    //if collection on selected date existing
+                    Toast.makeText(SortRoomActivity.this, "collection exists", Toast.LENGTH_SHORT).show();
+                    onDateCollectionPresent(dateCollectionDocument , currentDate , currentBlock);
                 }
                 else {
-                    //displayAll
+                    //display All category rooms
                     String[] blockCharArray = setBlockBtn.getText().toString().split("-");
                     String block = blockCharArray[0];
 
@@ -191,7 +211,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                             .build();
 
                     adapter = new UserSlotAdapter(options);
-
                     recyclerView.setAdapter(adapter);
                     adapter.startListening();
 
@@ -199,6 +218,29 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
+
+    }
+
+    private void onDateCollectionPresent(DocumentReference dateCollectionDocument
+            , String currentDate
+            , String currentBlock) {
+
+         roomCollection = dateCollectionDocument.collection(currentBlock);
+
+        if(roomCollection.get().getResult().isEmpty()){
+            Toast.makeText(this, "Error : 404", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        query = roomCollection.orderBy("roomNo", Query.Direction.ASCENDING);
+        options = new FirestoreRecyclerOptions.Builder<SlotModel>()
+                .setQuery(query, SlotModel.class)
+                .build();
+
+        adapter = new UserSlotAdapter(options);
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
+
 
     }
 
