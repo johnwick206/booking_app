@@ -3,7 +3,9 @@ package com.example.booking_app.Admin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +32,7 @@ public class AddRoomActivity extends AppCompatActivity implements View.OnClickLi
     private TextView categoryT, blockT;
     private Button addBtn;
     private ClickedTextView clickedStatus ;
+    ProgressDialog progressDialog;
 
     String blockS , roomS , categoryS;
 
@@ -96,14 +99,30 @@ public class AddRoomActivity extends AppCompatActivity implements View.OnClickLi
     }
     //on click add button
     public void addRoom(){
+        progressDialog = new ProgressDialog(AddRoomActivity.this);
+        progressDialog.setTitle("Add New Room");
+        progressDialog.setMessage("Adding new Room");
+        progressDialog.show();
+
         categoryS = categoryT.getText().toString();
         blockS = blockT.getText().toString();
-        blockS = blockS.substring(0 , blockS.indexOf('-'));
         roomS = roomET.getText().toString();
 
+        if(categoryS.equals("Category")
+                || blockS.equals("Block")
+                || TextUtils.isEmpty(roomS)
+               || roomS.length()<3){
+            Toast.makeText(this, "Enter all fields\nand room should contain 3 character number only", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
+            return;
+        }
+
+        blockS = blockS.substring(0 , blockS.indexOf('-'));
+
+
         HashMap<String , Object> map = new HashMap<>();
-        for (int i=9 ; i <=5 ; i++)
-        map.put( i +"-"+i+1 ,"0");
+       map.put("roomNo" , roomS);
+       map.put("slots" , "000000000");
 
 
         DocumentReference reference =  fireStore.collection(categoryS)
@@ -114,8 +133,12 @@ public class AddRoomActivity extends AppCompatActivity implements View.OnClickLi
         reference.set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful())  Toast.makeText(AddRoomActivity.this, "Added", Toast.LENGTH_SHORT).show();
-                else Toast.makeText(AddRoomActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                if(task.isSuccessful()) {
+                    Toast.makeText(AddRoomActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                    finish();
+                }else Toast.makeText(AddRoomActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
             }
         });
     }

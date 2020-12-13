@@ -34,35 +34,95 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp">
-        <CheckBox
-            android:id="@+id/time1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9am-12pm"
-            android:layout_weight="1"/>
 
-        <CheckBox
-            android:id="@+id/time2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12pm-3pm"
-            android:layout_weight="1"/>
+                    <HorizontalScrollView
+                        android:id="@+id/HScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
 
-        <CheckBox
-            android:id="@+id/time3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3pm-6pm"
-            android:layout_weight="1"/>
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/time1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="9am-10am"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="10dp"/>
+
+                    <CheckBox
+                        android:id="@+id/time2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10am-11am"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="10dp"/>
+
+                    <CheckBox
+                        android:id="@+id/time3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11am-12pm"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="12pm-1pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1pm-2pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2pm-3pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3pm-4pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="4pm-5pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                            <CheckBox
+                                android:id="@+id/time9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="5pm-6pm"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="10dp"/>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
 
         <EditText
             android:id="@+id/title1"
@@ -70,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:hint="Title"
-            android:layout_below="@id/linearLayout"
+            android:layout_below="@id/HScrollView"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20sp"
             android:ems="10"

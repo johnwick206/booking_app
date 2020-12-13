@@ -80,7 +80,8 @@
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/white_round_bg"
             android:hint="Room"
-            android:paddingHorizontal="20dp"/>
+            android:paddingHorizontal="20dp"
+            android:inputType="number"/>
 
     </RelativeLayout>
 

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.booking_app.CalenderFragment;
 import com.example.booking_app.DialogBoxRB;
+import com.example.booking_app.FormatFields;
 import com.example.booking_app.R;
 import com.example.booking_app.RoomDetails;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -40,7 +41,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
     private RecyclerView recyclerView;
     FirebaseFirestore fireStore;
     DocumentReference dateCollectionDocument;
-    CollectionReference roomCollection;
+    CollectionReference roomCollection , dateCollection;
     public UserSlotAdapter adapter;
     Query query;
     FirestoreRecyclerOptions<SlotModel> options;
@@ -64,6 +65,11 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
         setTitle();
 
+        dateCollection = fireStore.collection("Date")
+                .document("03-12-2020")
+                .collection(RoomDetails.roomType)
+                .document("block").collection("A");
+
         roomCollection = fireStore.collection("classroom")
                 .document("block")
                 .collection("A");
@@ -76,7 +82,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
         recyclerView = findViewById(R.id.recylcerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-       // recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
 
@@ -88,12 +93,13 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         });
 
 
+        //onclick room to open form
         UserSlotAdapter.setOnCLickRoom(new UserSlotAdapter.onClickRoom() {
             @Override
             public void openForm(String slots , String roomNo) {
                 Intent intent = new Intent(SortRoomActivity.this , FormActivity.class);
                 intent.putExtra("room" , roomNo);
-                intent.putExtra("date" , formatDate());
+                intent.putExtra("date" , RoomDetails.date);
                 intent.putExtra("block" , setBlockBtn.getText());
 
                 RoomDetails.roomBlock = setBlockBtn.getText().toString();
@@ -149,25 +155,12 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(SortRoomActivity.this , FormActivity.class);
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(SortRoomActivity.this , card , "cardTransition2");
         intent.putExtra("room" , name);
-        intent.putExtra("date" , formatDate());
+        intent.putExtra("date" , RoomDetails.date);
         intent.putExtra("block" , setBlockBtn.getText());
 
         RoomDetails.roomBlock = setBlockBtn.getText().toString();
         RoomDetails.roomNumber = name;
         startActivity(intent,optionsCompat.toBundle());
-    }
-
-    private String formatDate() {
-
-        String dateChangeFormat = "Date";
-        try {
-            String[] splitDate = setDateBtn.getText().toString().split("/");
-             dateChangeFormat = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0];
-        }
-        catch (IndexOutOfBoundsException e){
-            Toast.makeText(this, "Choose date", Toast.LENGTH_SHORT).show();
-        }
-        return dateChangeFormat;
     }
 
 
@@ -176,16 +169,22 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
          final String currentDate, currentBlock;
         currentDate = setDateBtn.getText().toString();
         currentBlock = setBlockBtn.getText().toString();
-        dateCollectionDocument = fireStore.collection("Date")
-                .document(currentDate)
-                .collection(RoomDetails.roomType)
-                .document("block");
 
         //select date and block first
-        if(currentDate.equals("Date") && currentBlock.equals("Block")){
+        if(currentDate.equals("Date") && currentBlock.equals("BLOCK")){
             Toast.makeText(this, "Select Date and Block", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        //format block and date
+        new FormatFields(currentDate , currentBlock);
+
+
+        dateCollectionDocument = fireStore.collection("Date")
+                .document(RoomDetails.date)
+                .collection(RoomDetails.roomType)
+                .document("block");
+
 
         //uncomment
         dateCollectionDocument.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -193,17 +192,14 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
                     //if collection on selected date existing
-                    Toast.makeText(SortRoomActivity.this, "collection exists", Toast.LENGTH_SHORT).show();
                     onDateCollectionPresent(dateCollectionDocument , currentDate , currentBlock);
                 }
                 else {
                     //display All category rooms
-                    String[] blockCharArray = setBlockBtn.getText().toString().split("-");
-                    String block = blockCharArray[0];
 
                      roomCollection = fireStore.collection(RoomDetails.roomType)
                             .document("block")
-                            .collection(block);
+                            .collection(RoomDetails.roomBlock);
 
                     query = roomCollection.orderBy("roomNo", Query.Direction.ASCENDING);
                     options = new FirestoreRecyclerOptions.Builder<SlotModel>()
@@ -213,6 +209,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                     adapter = new UserSlotAdapter(options);
                     recyclerView.setAdapter(adapter);
                     adapter.startListening();
+                    adapter.notifyDataSetChanged();
 
                     Toast.makeText(SortRoomActivity.this, "display all", Toast.LENGTH_SHORT).show();
                 }
@@ -225,22 +222,49 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
             , String currentDate
             , String currentBlock) {
 
-         roomCollection = dateCollectionDocument.collection(currentBlock);
+        dateCollection = fireStore.collection("Date")
+                .document(RoomDetails.date)
+                .collection(RoomDetails.roomType)
+                .document("block").collection(RoomDetails.roomBlock);
 
-        if(roomCollection.get().getResult().isEmpty()){
-            Toast.makeText(this, "Error : 404", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
-        query = roomCollection.orderBy("roomNo", Query.Direction.ASCENDING);
-        options = new FirestoreRecyclerOptions.Builder<SlotModel>()
-                .setQuery(query, SlotModel.class)
-                .build();
+       dateCollection.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+           @Override
+           public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(!task.getResult().isEmpty()){
 
-        adapter = new UserSlotAdapter(options);
-        recyclerView.setAdapter(adapter);
-        adapter.startListening();
+                    query = dateCollection.orderBy("roomNo", Query.Direction.ASCENDING);
+                    options = new FirestoreRecyclerOptions.Builder<SlotModel>()
+                            .setQuery(query, SlotModel.class)
+                            .build();
 
+                    adapter = new UserSlotAdapter(options);
+                    recyclerView.setAdapter(adapter);
+                    adapter.startListening();
+                    adapter.notifyDataSetChanged();
+
+
+                    Toast.makeText(SortRoomActivity.this, "collection exists", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    roomCollection = fireStore.collection(RoomDetails.roomType)
+                            .document("block")
+                            .collection(RoomDetails.roomBlock);
+
+                    query = roomCollection.orderBy("roomNo", Query.Direction.ASCENDING);
+                    options = new FirestoreRecyclerOptions.Builder<SlotModel>()
+                            .setQuery(query, SlotModel.class)
+                            .build();
+
+                    adapter = new UserSlotAdapter(options);
+                    recyclerView.setAdapter(adapter);
+                    adapter.startListening();
+                    adapter.notifyDataSetChanged();
+
+                    Toast.makeText(SortRoomActivity.this, "display all : no room booked", Toast.LENGTH_SHORT).show();
+                }
+           }
+       });
 
     }
 
