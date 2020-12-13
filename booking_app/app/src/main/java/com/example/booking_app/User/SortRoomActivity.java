@@ -100,7 +100,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 Intent intent = new Intent(SortRoomActivity.this , FormActivity.class);
                 intent.putExtra("room" , roomNo);
                 intent.putExtra("date" , RoomDetails.date);
-                intent.putExtra("block" , setBlockBtn.getText());
+                intent.putExtra("block" , RoomDetails.roomBlock);
+                intent.putExtra("slots" , slots);
 
                 RoomDetails.roomBlock = setBlockBtn.getText().toString();
                 RoomDetails.roomNumber = roomNo;
@@ -145,9 +146,18 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         c.set(Calendar.YEAR , year);
         c.set(Calendar.MONTH , month);
         c.set(Calendar.DAY_OF_MONTH , day);
-        String occasionDate = DateFormat.getDateInstance(DateFormat.SHORT).format(c.getTime());
 
-        setDateBtn.setText(occasionDate);
+        month = month + 1;
+
+        //date format yyyy-m-d
+        String occasionDate = year + "-" + month + "-" + day;
+        RoomDetails.date = occasionDate;
+
+        Toast.makeText(this, occasionDate, Toast.LENGTH_SHORT).show();
+
+        //date visible to user
+        String visibleDate = day + "-" + month + "-" + year;
+        setDateBtn.setText(visibleDate);
     }
 
     //on click specific room card
@@ -157,6 +167,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         intent.putExtra("room" , name);
         intent.putExtra("date" , RoomDetails.date);
         intent.putExtra("block" , setBlockBtn.getText());
+
 
         RoomDetails.roomBlock = setBlockBtn.getText().toString();
         RoomDetails.roomNumber = name;
@@ -177,7 +188,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         }
 
         //format block and date
-        new FormatFields(currentDate , currentBlock);
+        String[] blockSortArray = currentBlock.split("-");
+        RoomDetails.roomBlock = blockSortArray[0];
 
 
         dateCollectionDocument = fireStore.collection("Date")

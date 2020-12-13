@@ -17,7 +17,6 @@ public class FormatFields {
 
 
     private void setBlock(String block) {
-        String[] blockSortArray = block.split("-");
-        RoomDetails.roomBlock = blockSortArray[0];
+
     }
 }
