@@ -166,6 +166,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 .collection(RoomDetails.roomType)
                 .document("block");
 
+
+
         //uncomment
         dateCollectionDocument.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -194,8 +196,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                     adapter.startListening();
 
                     Toast.makeText(SortRoomActivity.this, "display all", Toast.LENGTH_SHORT).show();
-
-
                 }
             }
         });
