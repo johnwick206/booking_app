@@ -1,7 +1,6 @@
 package com.example.booking_app.User;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
@@ -10,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,8 +16,6 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.booking_app.Admin.AdminEventAdapter;
-import com.example.booking_app.Admin.AdminEventModel;
 import com.example.booking_app.CalenderFragment;
 import com.example.booking_app.DialogBoxRB;
 import com.example.booking_app.R;
@@ -32,9 +28,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.DateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class SortRoomActivity extends AppCompatActivity implements View.OnClickListener , DatePickerDialog.OnDateSetListener {
@@ -42,22 +38,25 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
     private TextView titleTV;
     private Button setDateBtn , setBlockBtn , searchBtn;
     private RecyclerView recyclerView;
-    FirebaseFirestore firestore;
+    FirebaseFirestore fireStore;
     DocumentReference dateCollectionDocument;
+    CollectionReference roomCollection;
     public UserSlotAdapter adapter;
+    Query query;
+    FirestoreRecyclerOptions<SlotModel> options;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking_type);
+        setContentView(R.layout.activity_sort_room);
 
         titleTV = findViewById(R.id.CategoryTitle);
         setDateBtn = findViewById(R.id.DateSetBtn);
         setBlockBtn = findViewById(R.id.Name);
         searchBtn = findViewById(R.id.searchBtn);
-        recyclerView = findViewById(R.id.recylcerView2);
+       // recyclerView = findViewById(R.id.recylcerView2);
 
-        firestore = FirebaseFirestore.getInstance();
+        fireStore = FirebaseFirestore.getInstance();
 
         setDateBtn.setOnClickListener(this);
         setBlockBtn.setOnClickListener(this);
@@ -65,6 +64,20 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
         setTitle();
 
+        roomCollection = fireStore.collection("classroom")
+                .document("block")
+                .collection("A");
+
+        //retrieved data from firebase
+         query = roomCollection.orderBy("roomNo",Query.Direction.DESCENDING);
+        FirestoreRecyclerOptions<SlotModel> options = new FirestoreRecyclerOptions.Builder<SlotModel>().setQuery(query , SlotModel.class).build();
+
+        adapter = new UserSlotAdapter(options);
+
+        recyclerView = findViewById(R.id.recylcerView2);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+       // recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         DialogBoxRB.setOnCLickBlockOptn(new DialogBoxRB.onClickBlocks() {
             @Override
@@ -148,7 +161,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
          String currentDate, currentBlock;
         currentDate = setDateBtn.getText().toString();
         currentBlock = setBlockBtn.getText().toString();
-        dateCollectionDocument = firestore.collection("Date")
+        dateCollectionDocument = fireStore.collection("Date")
                 .document(currentDate)
                 .collection(RoomDetails.roomType)
                 .document("block");
@@ -166,21 +179,23 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                     String[] blockCharArray = setBlockBtn.getText().toString().split("-");
                     String block = blockCharArray[0];
 
-                    CollectionReference roomCollection = firestore.collection("classroom")
+                     roomCollection = fireStore.collection(RoomDetails.roomType)
                             .document("block")
-                            .collection("A");
+                            .collection(block);
 
-                    Query query = roomCollection.orderBy("roomNo" , Query.Direction.ASCENDING);
-                    FirestoreRecyclerOptions<SlotModel> options = new FirestoreRecyclerOptions.Builder<SlotModel>()
-                            .setQuery(query , SlotModel.class)
+                    query = roomCollection.orderBy("roomNo", Query.Direction.ASCENDING);
+                    options = new FirestoreRecyclerOptions.Builder<SlotModel>()
+                            .setQuery(query, SlotModel.class)
                             .build();
 
                     adapter = new UserSlotAdapter(options);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(SortRoomActivity.this));
-                    recyclerView.setHasFixedSize(true);
+
                     recyclerView.setAdapter(adapter);
                     adapter.startListening();
-                    Toast.makeText(SortRoomActivity.this, "display all" + task.getException(), Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(SortRoomActivity.this, "display all", Toast.LENGTH_SHORT).show();
+
+
                 }
             }
         });
@@ -190,7 +205,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onStart() {
         super.onStart();
-        if(adapter != null)
         adapter.startListening();
     }
 

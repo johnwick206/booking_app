@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.SortRoomActivity">
+
+    <TextView
+        android:id="@+id/CategoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Name"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:transitionName="cardTransition"
+        android:background="@mipmap/titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategoryTitle"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15sp">
+
+        <Button
+            android:id="@+id/DateSetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@drawable/date_name_bg"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:layout_gravity="center"
+            android:text="Date"/>
+
+        <Button
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" android:background="@drawable/date_name_bg"
+            android:layout_marginLeft="10dp"
+            android:text="Name"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/LinearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBtn"
+        android:layout_marginTop="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylcerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"/>
+    </ScrollView>
+</RelativeLayout>
