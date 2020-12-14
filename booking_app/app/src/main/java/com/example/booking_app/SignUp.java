@@ -3,10 +3,12 @@ package com.example.booking_app;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,10 +23,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
-   private EditText nameT , emailT , passwordT;
+   private EditText firstNameT , lastNameT , passwordT;
+   private TextView emailT;
    private Button signUpBtn ;
    private FirebaseAuth mAuth;
    private ProgressDialog progressDialog;
+   private String firstNameS , lastNameS, emailS , passwordS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +48,14 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 checkVerifyStatus();
             }
         });
+
+        FixedUpdate();
     }
 
     private void refUI() {
 
-        nameT = findViewById(R.id.UserNameED);
+        firstNameT = findViewById(R.id.UserFirstNameED);
+        lastNameT = findViewById(R.id.UserLastNameED);
         emailT = findViewById(R.id.EmailED);
         passwordT = findViewById(R.id.PasswordED);
         signUpBtn = findViewById(R.id.SignUpBtn);
@@ -62,21 +69,40 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+    private void FixedUpdate() {
+        final Handler handler =new Handler();
+        final Runnable r = new Runnable() {
+            public void run() {
+                handler.postDelayed(this, 1000);
+                firstNameS = firstNameT.getText().toString().trim();
+                lastNameS = lastNameT.getText().toString().trim();
+
+                emailS = firstNameS.toLowerCase() +"." + lastNameS.toLowerCase() +"@vit.edu.in";
+                emailT.setText(emailS);
+            }
+        };
+        handler.postDelayed(r , 1000);
+    }
+
     private void signUpWithEmail() {
 
-        String nameS , emailS , passwordS;
-        nameS = nameT.getText().toString();
-        emailS = emailT.getText().toString().trim();
         passwordS = passwordT.getText().toString().trim();
 
-        if(TextUtils.isEmpty(nameS)){
-            nameT.setError("Enter name");
+        if(TextUtils.isEmpty(firstNameS)){
+            firstNameT.setError("Enter name");
             return;
         }
+
+        if(TextUtils.isEmpty(lastNameS)){
+            firstNameT.setError("Enter name");
+            return;
+        }
+
         if(TextUtils.isEmpty(emailS)){
             emailT.setError("Enter valid email-id");
             return;
         }
+
         if(TextUtils.isEmpty(passwordS)){
             passwordT.setError("Enter password");
             return;

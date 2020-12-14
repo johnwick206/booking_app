@@ -260,7 +260,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
                     status = BookingDateStatus.AlreadyExisting;
 
-                    query = dateCollection.orderBy("roomNo", Query.Direction.ASCENDING);
+                    query = dateCollection.whereNotEqualTo("slots" , "111111111").orderBy("slots").orderBy("roomNo", Query.Direction.ASCENDING);
                     options = new FirestoreRecyclerOptions.Builder<SlotModel>()
                             .setQuery(query, SlotModel.class)
                             .build();

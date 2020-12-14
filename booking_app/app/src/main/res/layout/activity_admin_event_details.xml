@@ -9,201 +9,290 @@
 
 
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Hall Booking Seminar"
-            android:textColor="#05786E"
-            android:textSize="27sp"
-            android:layout_marginTop="50dp"/>
 
-        <TextView
-            android:id="@+id/organizerName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="30dp"
-            android:text="Organizer"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:layout_below="@id/name"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/white_round_bg"
-            android:textColor="#000"/>
-
-
-    <RelativeLayout
-        android:id="@+id/category"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="108dp"
-        android:layout_marginHorizontal="20sp"
-        android:layout_marginTop="20sp"
-        android:background="@drawable/white_round_bg"
-        android:gravity="center"
-        android:layout_below="@id/organizerName">
+        android:layout_height="match_parent">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Category"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/actualcategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="40dp"
-            android:text="Seminar Hall"
-            android:textSize="22sp"
-            android:textColor="#000" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hall Booking Seminar"
+                android:textColor="#05786E"
+                android:textSize="27sp"
+                android:layout_marginTop="50dp"/>
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nameBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:background="@drawable/white_round_bg"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="20sp">
+                <TextView
+                    android:id="@+id/OrgnameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="30dp"
+                    android:text="Organizer"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/category"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="10dp">
+                <TextView
+                    android:id="@+id/organizerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/OrgnameTitle"
+                    android:textSize="22sp"
+                    android:textColor="#000"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:text="Name"/>
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="149dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:background="@drawable/white_round_bg"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp">
 
-        <TextView
-            android:id="@+id/roomno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="Room No."
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"/>
+            <RelativeLayout
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="center"
+                android:layout_below="@id/nameBox">
 
-        <TextView
-            android:id="@+id/actualroomno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:text="M-101"
-            android:textSize="22sp"
-            android:textColor="#000"/>
+                <TextView
+                    android:id="@+id/category_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Category"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/actualcategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="Seminar Hall"
+                    android:layout_below="@+id/category_title"
+                    android:textSize="22sp"
+                    android:textColor="#000" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="149dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:background="@drawable/white_round_bg"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp">
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Date"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp">
 
-        <TextView
-            android:id="@+id/actualdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@id/date"
-            android:text="02-12-2020"
-            android:textSize="22sp"
-            android:textColor="#000"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="149dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_round_bg"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp">
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/roomno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Room No."
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"/>
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/actualroomno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_below="@+id/roomno"
+                        android:text="M-101"
+                        android:textSize="22sp"
+                        android:textColor="#000"/>
 
-    <RelativeLayout
-        android:id="@+id/slot"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20sp"
-        android:background="@drawable/white_round_bg"
-        android:gravity="center"
-        android:layout_below="@id/linearLayout"
-        android:paddingVertical="20dp">
+                </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Slot"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="149dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_round_bg"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
 
-        <TextView
-            android:id="@+id/actualslot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:text="9am-12pm"
-            android:textSize="22sp"
-            android:textColor="#000"/>
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Date"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"/>
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/actualdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/date"
+                        android:text="02-12-2020"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:textSize="22sp"
+                        android:textColor="#000"/>
 
-    <RelativeLayout
-        android:id="@+id/contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/white_round_bg"
-        android:gravity="center"
-        android:layout_below="@id/slot"
-        android:paddingVertical="20dp">
+                </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Contact"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/actualcontact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:text="example@gmail.com"
-            android:textSize="22sp"
-            android:textColor="#000"/>
+            <RelativeLayout
+                android:id="@+id/slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="center"
+                android:layout_below="@id/linearLayout"
+                android:paddingVertical="20dp">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/slot_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Slot"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/actualslot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="9am-12pm"
+                    android:layout_below="@+id/slot_title"
+                    android:gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="22sp"
+                    android:textColor="#000"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/splreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="center"
+                android:layout_below="@id/slot"
+                android:paddingVertical="20dp">
+
+                <TextView
+                    android:id="@+id/req_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Special Requirements"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/req"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="N.A."
+                    android:gravity="center"
+                    android:layout_below="@+id/req_title"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:textSize="22sp"
+                    android:textColor="#000"/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/white_round_bg"
+                android:gravity="center"
+                android:layout_below="@id/splreq"
+                android:paddingVertical="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/contact_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Contact"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/actualcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="example@gmail.com"
+                    android:layout_below="@+id/contact_title"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:textSize="22sp"
+                    android:textColor="#000"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

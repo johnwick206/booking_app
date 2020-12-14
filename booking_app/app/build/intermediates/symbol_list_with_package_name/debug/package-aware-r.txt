@@ -1747,6 +1747,7 @@ id MoveToSIgnUp
 id NO_DEBUG
 id Name
 id NewRoomName
+id OrgnameTitle
 id PassWordED
 id PasswordED
 id RoomHeader
@@ -1761,7 +1762,8 @@ id SeminarCard
 id SignUpBtn
 id TOP_END
 id TOP_START
-id UserNameED
+id UserFirstNameED
+id UserLastNameED
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1858,6 +1860,7 @@ id cache_measures
 id cancel_action
 id cancel_button
 id category
+id category_title
 id center
 id center_horizontal
 id center_vertical
@@ -1889,6 +1892,7 @@ id com_facebook_tooltip_bubble_view_top_pointer
 id confirm_button
 id confirmation_code
 id contact
+id contact_title
 id container
 id content
 id contentPanel
@@ -2028,6 +2032,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id name
+id nameBox
 id navigation_header_container
 id never
 id never_display
@@ -2068,6 +2073,8 @@ id ratio
 id rectangles
 id recylcerView
 id recylcerView2
+id req
+id req_title
 id reverseSawtooth
 id right
 id right_icon
@@ -2109,6 +2116,7 @@ id skipCollapsed
 id slide
 id slot
 id slotName
+id slot_title
 id small
 id smallLabel
 id snackbar_action
@@ -2120,6 +2128,7 @@ id splReqTitle
 id splRequirement
 id spline
 id split_action_bar
+id splreq
 id spread
 id spread_inside
 id square

@@ -3,6 +3,7 @@ package com.example.booking_app.User;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSl
         });
 
         roomList.add(model.getRoomNo());
+
     }
 
     @NonNull
@@ -45,10 +47,12 @@ public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSl
 
     public static class SlotHolder extends RecyclerView.ViewHolder {
 
-        TextView roomNo;
+        TextView roomNo; RelativeLayout roomCard;
         public SlotHolder(@NonNull View itemView) {
             super(itemView);
+
             roomNo = itemView.findViewById(R.id.RoomNo);
+            roomCard = itemView.findViewById(R.id.roomCard);
         }
     }
 
