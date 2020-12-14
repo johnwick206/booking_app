@@ -27,7 +27,7 @@
         android:layout_height="200dp"
         android:layout_below="@id/pageTitle"
         android:layout_margin="15dp"
-        android:background="@mipmap/clsroomcard"
+        android:background="@mipmap/classroomcard"
         android:transitionName="cardTransition"
         android:clickable="true"
         android:focusable="true"/>

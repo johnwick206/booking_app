@@ -12,6 +12,6 @@
     <string-array name="RoomType">
         <item>classroom</item>
         <item>lab</item>
-        <item>seminar</item>
+        <item>seminar hall</item>
     </string-array>
 </resources>

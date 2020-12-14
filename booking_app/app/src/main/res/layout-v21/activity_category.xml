@@ -45,9 +45,6 @@
                 android:transitionName="cardTransition"
                 android:layout_below="@id/imageSlider"/>
 
-
-
-
     <View
         android:id="@+id/LabCard"
         android:layout_width="match_parent"

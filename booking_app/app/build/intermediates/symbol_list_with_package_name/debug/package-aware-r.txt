@@ -2390,6 +2390,7 @@ mipmap card
 mipmap card_block
 mipmap clasrom
 mipmap class_card
+mipmap classroomcard
 mipmap clsroomcard
 mipmap computerlab
 mipmap default_img

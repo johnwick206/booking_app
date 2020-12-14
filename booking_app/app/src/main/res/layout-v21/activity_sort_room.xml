@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.SortRoomActivity">
+    tools:context=".User.SortRoomActivity"
+    android:background="@mipmap/bg_2">
 
     <TextView
         android:id="@+id/CategoryTitle"
