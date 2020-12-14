@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -30,7 +31,7 @@ public class FormActivity extends AppCompatActivity {
     private String roomTitleS , seminarNameS , descriptionS , organizingBodyS , audienceNoS ,splRequirementS;
     private String date , block , name;
     private CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9;
-    private String allSlots ,slotselected;
+    private String allSlots ,slotselected , currentCheckedSlot;
     private Button bookBtn;
 
     private int i=0;
@@ -39,6 +40,8 @@ public class FormActivity extends AppCompatActivity {
 
     FirebaseFirestore fireStore;
     FirebaseAuth mAuth;
+
+    DocumentReference a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +124,7 @@ public class FormActivity extends AppCompatActivity {
     private void bookSeminar() {
 
         int[] value = {0,0,0,0,0,0,0,0,0};
+        int[] checkedSlots = {0,0,0,0,0,0,0,0,0};
         int atleastOne=0;
         int i =0; //local variable i
 
@@ -128,6 +132,7 @@ public class FormActivity extends AppCompatActivity {
         while (i < checkBoxList.size()){
             if(checkBoxList.get(i).isChecked()){
                 value[i]=1;
+                checkedSlots[i]=1;
                 atleastOne  = 1;
             }
             else if(!checkBoxList.get(i).isEnabled()) value[i]=1;
@@ -135,24 +140,28 @@ public class FormActivity extends AppCompatActivity {
         }
 
          slotselected = new String();
+         currentCheckedSlot = new String();
+
 
         for(i=0;i<value.length;i++){
             slotselected=slotselected.concat(Integer.toString(value[i]));
+            currentCheckedSlot=currentCheckedSlot.concat(Integer.toString(checkedSlots[i]));
         }
 
 
         if((atleastOne != 1)) {
-            Toast.makeText(FormActivity.this, "Please select atleast one slot" + slotselected +"-" + atleastOne, Toast.LENGTH_SHORT).show();
+            Toast.makeText(FormActivity.this, "Please select atleast one slot" + UserSlotAdapter.roomList.size(), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        try {
-            dialog = new ProgressDialog(FormActivity.this);
-            dialog.setTitle("Add");
-            dialog.setMessage("Adding");
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.show();
 
+        dialog = new ProgressDialog(FormActivity.this);
+        dialog.setTitle("Add");
+        dialog.setMessage("Adding");
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+        try {
 
             // TODO: 10-12-2020 select slots
 
@@ -163,10 +172,16 @@ public class FormActivity extends AppCompatActivity {
             audienceNoS = audienceNoET.getText().toString();
             splRequirementS = splRequirementET.getText().toString();
 
+            if(TextUtils.isEmpty(roomTitleS)
+                    || TextUtils.isEmpty(seminarNameS)
+                    || TextUtils.isEmpty(descriptionS)
+                    || TextUtils.isEmpty(organizingBodyS)
+                    || TextUtils.isEmpty(audienceNoS)
+                    || TextUtils.isEmpty(splRequirementS)){
+                throw new NullPointerException();
+            }
 
             final HashMap<String , Object> map1 = new HashMap<>();
-            map1.put("roomNo", RoomDetails.roomNumber);
-            map1.put("slots" , slotselected );
 
             final HashMap<String , Object> mapDummy = new HashMap<>();
             mapDummy.put("dummy" , "randomValue");
@@ -178,58 +193,98 @@ public class FormActivity extends AppCompatActivity {
                  @Override
                  public void onComplete(@NonNull Task<Void> task) {
 
-                    final DocumentReference a = dateReference.collection(RoomDetails.roomType).document("block");
+                     a = dateReference.collection(RoomDetails.roomType).document("block");
 
                     a.set(mapDummy).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+
+                            if(SortRoomActivity.status == SortRoomActivity.BookingDateStatus.FirstBooking){
+                                //add all rooms to the block
+                                addAllRooms(0);
+                                Toast.makeText(FormActivity.this, "First Slot booking from resp block", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
                             DocumentReference b = a.collection(RoomDetails.roomBlock).document(RoomDetails.roomNumber);
+
+                            map1.put("roomNo", RoomDetails.roomNumber);
+                            map1.put("slots" , slotselected );
+
                             b.set(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful())
-                                    Toast.makeText(FormActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                                    if(task.isSuccessful()) {
+                                        Toast.makeText(FormActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                                        collectionForAdmin();
+                                    }
                                 }
                             });
                         }
                     });
                  }
              });
-
-
-
-            HashMap<String, Object> map = new HashMap<>();
-            map.put("roomNo", roomTitleS);
-            map.put("seminarName", seminarNameS);
-            map.put("description", descriptionS);
-            map.put("organizer", organizingBodyS);
-            map.put("category", RoomDetails.roomType);
-            map.put("audience", audienceNoS);
-            map.put("splRequirement", splRequirementS);
-            map.put("email", mAuth.getCurrentUser().getEmail().toString());
-            map.put("date", date);
-            map.put("block", block);
-            map.put("slot" , slotselected);
-
-            DocumentReference seminarsReference = fireStore.collection("Booking: " + RoomDetails.roomType)
-                    .document(seminarNameS);
-
-            seminarsReference.set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful())
-                        Toast.makeText(FormActivity.this, "Form accepted", Toast.LENGTH_SHORT).show();
-                    else
-                        Toast.makeText(FormActivity.this, "Denied", Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            dialog.dismiss();
         }
         catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             dialog.dismiss();
         }
 
+    }
+
+    private void collectionForAdmin() {
+
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("roomNo", roomTitleS);
+        map.put("seminarName", seminarNameS);
+        map.put("description", descriptionS);
+        map.put("organizer", organizingBodyS);
+        map.put("category", RoomDetails.roomType);
+        map.put("audience", audienceNoS);
+        map.put("splRequirement", splRequirementS);
+        map.put("email", mAuth.getCurrentUser().getEmail().toString());
+        map.put("date", date);
+        map.put("block", block);
+        map.put("slot" , currentCheckedSlot);
+
+        DocumentReference seminarsReference = fireStore.collection("Booking: " + RoomDetails.roomType)
+                .document(seminarNameS);
+
+        seminarsReference.set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(FormActivity.this, "Form accepted", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+                else
+                    Toast.makeText(FormActivity.this, "Denied", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void addAllRooms(final int counter){
+
+        if(counter == UserSlotAdapter.roomList.size()-1)
+            collectionForAdmin();
+
+            HashMap<String, Object> map2 = new HashMap<>();
+            if(UserSlotAdapter.roomList.get(counter).equals(RoomDetails.roomNumber)) {
+                map2.put("roomNo", RoomDetails.roomNumber);
+                map2.put("slots", slotselected);
+            }else{
+                map2.put("roomNo", UserSlotAdapter.roomList.get(counter));
+                map2.put("slots", "000000000");
+            }
+            a.collection(RoomDetails.roomBlock).document(UserSlotAdapter.roomList.get(counter))
+                    .set(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(counter < UserSlotAdapter.roomList.size()-1)
+                    addAllRooms(counter+1);
+                }
+            });
     }
 }

@@ -45,6 +45,13 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
     public UserSlotAdapter adapter;
     Query query;
     FirestoreRecyclerOptions<SlotModel> options;
+    String day , month , year ;
+
+   public enum BookingDateStatus{
+        FirstBooking , AlreadyExisting
+    }
+
+    public static BookingDateStatus status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,15 +154,13 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         c.set(Calendar.DAY_OF_MONTH , day);
 
         month = month + 1;
+        this.day = (day<9) ?  "0" + day : Integer.toString(day);
+        this.month = (month<9) ?  "0" + month : Integer.toString(month);
+        this.year = Integer.toString(year);
 
-        //date format yyyy-m-d
-        String occasionDate = year + "-" + month + "-" + day;
-        RoomDetails.date = occasionDate;
-
-        Toast.makeText(this, occasionDate, Toast.LENGTH_SHORT).show();
 
         //date visible to user
-        String visibleDate = day + "-" + month + "-" + year;
+        String visibleDate = this.day + "-" + this.month + "-" + this.year;
         setDateBtn.setText(visibleDate);
     }
 
@@ -176,6 +181,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
     public void search() {
 
+        UserSlotAdapter.roomList.clear();
+
          final String currentDate, currentBlock;
         currentDate = setDateBtn.getText().toString();
         currentBlock = setBlockBtn.getText().toString();
@@ -190,6 +197,13 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         String[] blockSortArray = currentBlock.split("-");
         RoomDetails.roomBlock = blockSortArray[0];
 
+        //format date
+        //date format yyyy-m-d
+        String occasionDate = year + "-" + month + "-" + day;
+        RoomDetails.date = occasionDate;
+
+        Toast.makeText(this, occasionDate, Toast.LENGTH_SHORT).show();
+
 
         dateCollectionDocument = fireStore.collection("Date")
                 .document(RoomDetails.date)
@@ -197,6 +211,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 .document("block");
 
 
+        status = BookingDateStatus.FirstBooking;
         //uncomment
         dateCollectionDocument.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -207,7 +222,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                 }
                 else {
                     //display All category rooms
-
                      roomCollection = fireStore.collection(RoomDetails.roomType)
                             .document("block")
                             .collection(RoomDetails.roomBlock);
@@ -243,6 +257,8 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
            @Override
            public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(!task.getResult().isEmpty()){
+
+                    status = BookingDateStatus.AlreadyExisting;
 
                     query = dateCollection.orderBy("roomNo", Query.Direction.ASCENDING);
                     options = new FirestoreRecyclerOptions.Builder<SlotModel>()
@@ -281,12 +297,15 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void onStart() {
+
+        UserSlotAdapter.roomList.clear();
         super.onStart();
         adapter.startListening();
     }
 
     @Override
     protected void onStop() {
+
         super.onStop();
         adapter.stopListening();
     }

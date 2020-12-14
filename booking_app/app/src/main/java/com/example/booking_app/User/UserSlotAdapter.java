@@ -12,9 +12,12 @@ import com.example.booking_app.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
+import java.util.ArrayList;
+
 public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSlotAdapter.SlotHolder> {
 
     private static onClickRoom listener;
+    public static ArrayList<String> roomList = new ArrayList<>();
 
     public UserSlotAdapter(@NonNull FirestoreRecyclerOptions<SlotModel> options) {
         super(options);
@@ -29,6 +32,8 @@ public class UserSlotAdapter extends FirestoreRecyclerAdapter<SlotModel , UserSl
                 listener.openForm(model.getSlots() , model.getRoomNo());
             }
         });
+
+        roomList.add(model.getRoomNo());
     }
 
     @NonNull
