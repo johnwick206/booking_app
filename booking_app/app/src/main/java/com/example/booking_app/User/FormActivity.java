@@ -61,7 +61,9 @@ public class FormActivity extends AppCompatActivity {
         allSlots=getIntent().getStringExtra("slots");
 
         roomTitle.setText(name);
+
         bookedDisable();
+
         bookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,16 +120,17 @@ public class FormActivity extends AppCompatActivity {
 
     private void bookSeminar() {
 
-        // TODO: 09-12-2020 list checkboxes
-
-
         int[] value = {0,0,0,0,0,0,0,0,0};
         int atleastOne=0;
+        int i =0; //local variable i
 
 
         while (i < checkBoxList.size()){
-            if(checkBoxList.get(i).isChecked()){ value[i]=1;atleastOne=1;}
-            else if(!checkBoxList.get(i).isEnabled())value[i]=1;
+            if(checkBoxList.get(i).isChecked()){
+                value[i]=1;
+                atleastOne  = 1;
+            }
+            else if(!checkBoxList.get(i).isEnabled()) value[i]=1;
             i++;
         }
 
@@ -138,10 +141,10 @@ public class FormActivity extends AppCompatActivity {
         }
 
 
-       /* if(!(atleastOne > 0)) {
-            Toast.makeText(FormActivity.this, "Please select atleast one slot", Toast.LENGTH_SHORT).show();
+        if((atleastOne != 1)) {
+            Toast.makeText(FormActivity.this, "Please select atleast one slot" + slotselected +"-" + atleastOne, Toast.LENGTH_SHORT).show();
             return;
-        }*/
+        }
 
         try {
             dialog = new ProgressDialog(FormActivity.this);
