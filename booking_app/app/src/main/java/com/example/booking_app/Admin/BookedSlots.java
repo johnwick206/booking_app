@@ -59,7 +59,7 @@ public class BookedSlots extends AppCompatActivity {
     }
 
     private void adapterFn(String collectionName){
-        Query query = fireStore.collection( "Booking: " + collectionName).orderBy("date",Query.Direction.DESCENDING);
+        Query query = fireStore.collection( "Booking: " + collectionName).orderBy("date",Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<AdminEventModel> options = new FirestoreRecyclerOptions.Builder<AdminEventModel>().setQuery(query , AdminEventModel.class).build();
         adapter = new AdminEventAdapter(options);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
