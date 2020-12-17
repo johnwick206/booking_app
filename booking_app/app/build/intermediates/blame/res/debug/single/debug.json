@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\layout\\activity_category.xml"
     },
     {
-        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_btn.xml.flat",
-        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\drawable\\blue_btn.xml"
-    },
-    {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_vit_logo.png.flat",
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\mipmap-hdpi\\vit_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blue_btn.xml.flat",
+        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\drawable\\blue_btn.xml"
     },
     {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_form.xml.flat",
