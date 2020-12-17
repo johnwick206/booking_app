@@ -25,6 +25,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.booking_app.WelcomeScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.booking_app.Admin.BookedSlots" />
         <activity android:name="com.example.booking_app.Admin.AddRoomActivity" />
         <activity android:name="com.example.booking_app.Admin.AdminEventDetails" />
@@ -34,11 +41,6 @@
         <activity android:name="com.example.booking_app.User.CategoryActivity" />
         <activity android:name="com.example.booking_app.SignUp" />
         <activity android:name="com.example.booking_app.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"

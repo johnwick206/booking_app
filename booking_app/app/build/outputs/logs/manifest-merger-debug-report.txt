@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\61d2cfe405903f3397fb19077fa68435\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -85,20 +85,20 @@ MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\Pra
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\291a7c3c493b1334674114fca4d550c0\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\df12ae8f0adf231449e64e92aadc36a0\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\47241a6f5d229c05852e9110e3ed3216\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-31:12
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:2:11-69
@@ -123,7 +123,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:
 	android:name
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:7:5-29:19
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:7:5-31:19
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:18.0.0] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\4d1a8e0802c107ca9247bc9a01caa5b9\jetified-firebase-analytics-18.0.0\AndroidManifest.xml:7:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Pratik\.gradle\caches\transforms-2\files-2.1\e54b490c139e8cbd16bb7baf0f17cb05\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -204,52 +204,56 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Pratik\.g
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.example.booking_app.Admin.BookedSlots
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:14:9-64
+activity#com.example.booking_app.WelcomeScreen
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:14:19-52
-activity#com.example.booking_app.Admin.AddRoomActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:15:9-59
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:15:19-56
-activity#com.example.booking_app.Admin.AdminEventDetails
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:16:9-61
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:16:19-58
-activity#com.example.booking_app.Admin.AdminMain
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:17:9-53
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:17:19-50
-activity#com.example.booking_app.User.FormActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:9-55
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:19-52
-activity#com.example.booking_app.User.SortRoomActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:9-59
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:19:19-56
-activity#com.example.booking_app.User.CategoryActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:20:9-59
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:20:19-56
-activity#com.example.booking_app.SignUp
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:21:9-44
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:21:19-41
-activity#com.example.booking_app.MainActivity
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:22:9-28:20
-	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:22:19-47
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:14:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:18:27-74
+activity#com.example.booking_app.Admin.BookedSlots
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:21:9-55
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:21:19-52
+activity#com.example.booking_app.Admin.AddRoomActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:22:9-59
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:22:19-56
+activity#com.example.booking_app.Admin.AdminEventDetails
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:23:9-61
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:23:19-58
+activity#com.example.booking_app.Admin.AdminMain
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:24:9-53
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:24:19-50
+activity#com.example.booking_app.User.FormActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:25:9-55
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:25:19-52
+activity#com.example.booking_app.User.SortRoomActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:26:9-59
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:26:19-56
+activity#com.example.booking_app.User.CategoryActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:27:9-59
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:27:19-56
+activity#com.example.booking_app.SignUp
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:28:9-44
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:28:19-41
+activity#com.example.booking_app.MainActivity
+ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:29:9-30:20
+	android:name
+		ADDED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml:29:19-47
 uses-sdk
 INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Pratik\AndroidStudioProjects\BookingApp\booking_app\booking_app\app\src\main\AndroidManifest.xml

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\mipmap-hdpi\\lub.png"
     },
     {
-        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_delete_icon.png.flat",
-        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\delete_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_name_edittext.png.flat",
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\mipmap-hdpi\\name_edittext.png"
+    },
+    {
+        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_delete_icon.png.flat",
+        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\delete_icon.png"
     },
     {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg1.xml.flat",
@@ -110,6 +110,10 @@
     {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_add_btn.png.flat",
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\add_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_splash_screen.png.flat",
+        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\mipmap-hdpi\\splash_screen.png"
     },
     {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -302,5 +306,9 @@
     {
         "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_seminar.png.flat",
         "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\mipmap-hdpi\\seminar.png"
+    },
+    {
+        "merged": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome_screen.xml.flat",
+        "source": "C:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\src\\main\\res\\layout\\activity_welcome_screen.xml"
     }
 ]
