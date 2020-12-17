@@ -22,7 +22,7 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
 
 
     List<String> list = new ArrayList<>();
-
+    public  static String eventName="";
     private static onClickEvent listener;
 
     public AdminEventAdapter(@NonNull FirestoreRecyclerOptions<AdminEventModel> options) {
@@ -42,8 +42,9 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.deleteEvents(model.getSlot(),model.date,model.getSeminarName(),model.getRoomNo());
+                listener.deleteEvents(model.getSlot(),model.date,model.getSeminarName(),model.getRoomNo(),model.getEmail());
                 RoomDetails.roomBlock = model.getBlock();
+                eventName=model.getSeminarName();
             }
         });
     }
@@ -51,7 +52,7 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
     @NonNull
     @Override
     public EventHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_slot_model , parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_slot_model , parent, false);
         return new EventHolder(view);
     }
 
@@ -70,7 +71,7 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
 
     interface onClickEvent{
         void showDetails(String name);
-        void deleteEvents(String slot,String date,String name,String roomNo);
+        void deleteEvents(String slot,String date,String name,String roomNo,String mailId);
     }
 
     public static void setOnClickEvent(onClickEvent interfaceListener){

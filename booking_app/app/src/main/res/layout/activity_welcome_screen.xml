@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeScreen"
-    android:background="@mipmap/splash_screen">
+    android:background="@mipmap/splash_screen1">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

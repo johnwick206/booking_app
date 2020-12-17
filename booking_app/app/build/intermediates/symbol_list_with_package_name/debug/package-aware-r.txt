@@ -2410,6 +2410,7 @@ mipmap sem_hall
 mipmap seminar
 mipmap seminarcard
 mipmap splash_screen
+mipmap splash_screen1
 mipmap titlebar
 mipmap type_bg
 mipmap vit_logo

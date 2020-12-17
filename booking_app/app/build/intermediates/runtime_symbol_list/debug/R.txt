@@ -2409,9 +2409,10 @@ int mipmap sem_hall 0x7f0d0014
 int mipmap seminar 0x7f0d0015
 int mipmap seminarcard 0x7f0d0016
 int mipmap splash_screen 0x7f0d0017
-int mipmap titlebar 0x7f0d0018
-int mipmap type_bg 0x7f0d0019
-int mipmap vit_logo 0x7f0d001a
+int mipmap splash_screen1 0x7f0d0018
+int mipmap titlebar 0x7f0d0019
+int mipmap type_bg 0x7f0d001a
+int mipmap vit_logo 0x7f0d001b
 int plurals mtrl_badge_content_description 0x7f0e0000
 int string abc_action_bar_home_description 0x7f0f0000
 int string abc_action_bar_up_description 0x7f0f0001

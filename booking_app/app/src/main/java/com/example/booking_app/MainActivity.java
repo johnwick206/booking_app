@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	}
 
 	private boolean isAdmin(String email , String password){
-		return email.equals("adminvit2125@gmail.com") && password.equals("123456");
+		return email.equals("swapnilsonawane11@gmail.com") && password.equals("Mint1234");
 	}
 
 

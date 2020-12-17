@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -150,7 +151,7 @@ public class FormActivity extends AppCompatActivity {
 
 
         if((atleastOne != 1)) {
-            Toast.makeText(FormActivity.this, "Please select atleast one slot" + UserSlotAdapter.roomList.size(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(FormActivity.this, "Please select atleast one slot", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -202,7 +203,6 @@ public class FormActivity extends AppCompatActivity {
                             if(SortRoomActivity.status == SortRoomActivity.BookingDateStatus.FirstBooking){
                                 //add all rooms to the block
                                 addAllRooms(0);
-                                Toast.makeText(FormActivity.this, "First Slot booking from resp block", Toast.LENGTH_SHORT).show();
                                 return;
                             }
 
@@ -215,7 +215,6 @@ public class FormActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()) {
-                                        Toast.makeText(FormActivity.this, "Added", Toast.LENGTH_SHORT).show();
                                         collectionForAdmin();
                                     }
                                 }
@@ -257,6 +256,10 @@ public class FormActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(FormActivity.this, "Form accepted", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
+
+                    Intent moveToCategory = new Intent(FormActivity.this , CategoryActivity.class);
+                    moveToCategory.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(moveToCategory);
                 }
                 else
                     Toast.makeText(FormActivity.this, "Denied", Toast.LENGTH_SHORT).show();

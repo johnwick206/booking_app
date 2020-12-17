@@ -62,7 +62,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         setDateBtn = findViewById(R.id.DateSetBtn);
         setBlockBtn = findViewById(R.id.Name);
         searchBtn = findViewById(R.id.searchBtn);
-       // recyclerView = findViewById(R.id.recylcerView2);
 
         fireStore = FirebaseFirestore.getInstance();
 
@@ -112,6 +111,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
 
                 RoomDetails.roomNumber = roomNo;
                 startActivity(intent);
+                //finish();
             }
         });
 
@@ -164,6 +164,7 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         setDateBtn.setText(visibleDate);
     }
 
+    //discard
     //on click specific room card
     private void openRoom( CardView card,String name) {
         Intent intent = new Intent(SortRoomActivity.this , FormActivity.class);
@@ -202,9 +203,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
         String occasionDate = year + "-" + month + "-" + day;
         RoomDetails.date = occasionDate;
 
-        Toast.makeText(this, occasionDate, Toast.LENGTH_SHORT).show();
-
-
         dateCollectionDocument = fireStore.collection("Date")
                 .document(RoomDetails.date)
                 .collection(RoomDetails.roomType)
@@ -236,7 +234,6 @@ public class SortRoomActivity extends AppCompatActivity implements View.OnClickL
                     adapter.startListening();
                     adapter.notifyDataSetChanged();
 
-                    Toast.makeText(SortRoomActivity.this, "display all", Toast.LENGTH_SHORT).show();
                 }
             }
         });
