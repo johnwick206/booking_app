@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,12 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
                 listener.showDetails(model.getSeminarName());
             }
         });
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.deleteEvents(model.getSlot(),model.date,model.getSeminarName(),model.getRoomNo());
+            }
+        });
     }
 
     @NonNull
@@ -49,15 +56,19 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
 
     public static class EventHolder extends RecyclerView.ViewHolder{
         TextView slotNAme , date;
+        Button deleteButton;
+
         public EventHolder(@NonNull View itemView) {
             super(itemView);
             slotNAme = itemView.findViewById(R.id.slotName);
             date = itemView.findViewById(R.id.date);
+            deleteButton=itemView.findViewById(R.id.deleteButton);
         }
     }
 
     interface onClickEvent{
         void showDetails(String name);
+        void deleteEvents(String slot,String date,String name,String roomNo);
     }
 
     public static void setOnClickEvent(onClickEvent interfaceListener){

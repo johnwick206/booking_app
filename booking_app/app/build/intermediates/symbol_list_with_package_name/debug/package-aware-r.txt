@@ -1665,6 +1665,7 @@ drawable common_google_signin_btn_text_light_normal_background
 drawable date_name_bg
 drawable default_selected_dot
 drawable default_unselected_dot
+drawable delete_icon
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1908,6 +1909,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteButton
 id deltaRelative
 id dependency_ordering
 id descriptionBox

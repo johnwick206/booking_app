@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 #Thu Dec 17 17:59:25 IST 2020
+=======
+#Thu Dec 17 15:58:56 IST 2020
+>>>>>>> b45d22d7305c4dd9b644d36407c0eed8e6498417
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.1=C\:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.0=C\:\\Users\\Pratik\\AndroidStudioProjects\\BookingApp\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.2=C\:\\Users\\HERAMBA LIMAYE\\AndroidStudioProjects\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=C\:\\Users\\HERAMBA LIMAYE\\AndroidStudioProjects\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=C\:\\Users\\HERAMBA LIMAYE\\AndroidStudioProjects\\booking_app\\booking_app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
