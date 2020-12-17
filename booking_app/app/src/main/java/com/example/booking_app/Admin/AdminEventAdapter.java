@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.booking_app.R;
+import com.example.booking_app.RoomDetails;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
@@ -42,6 +43,7 @@ public class AdminEventAdapter extends FirestoreRecyclerAdapter<AdminEventModel,
             @Override
             public void onClick(View view) {
                 listener.deleteEvents(model.getSlot(),model.date,model.getSeminarName(),model.getRoomNo());
+                RoomDetails.roomBlock = model.getBlock();
             }
         });
     }
